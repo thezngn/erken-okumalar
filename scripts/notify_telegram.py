@@ -4,7 +4,7 @@ TELEGRAM_BOT_TOKEN ve TELEGRAM_CHAT_ID tanımlı değilse hiçbir şey yapmadan 
 Gönderilenler notified.json'a yazılır; aynı yazı iki kez gitmez.
 Sayfa henüz yayında değilse (HTTP 200 dönmüyorsa) en fazla ~6 dk bekler.
 """
-import json, os, sys, time, urllib.parse, urllib.request
+import json, os, sys, time, urllib.error, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,10 +25,16 @@ def live(url):
 
 
 def send(text):
-    data = urllib.parse.urlencode({"chat_id": CHAT, "text": text}).encode()
+    chat = CHAT if CHAT.startswith(("@", "-")) or CHAT.isdigit() else "@" + CHAT
+    data = urllib.parse.urlencode({"chat_id": chat, "text": text}).encode()
     req = urllib.request.Request(f"https://api.telegram.org/bot{TOKEN}/sendMessage", data=data)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.load(r).get("ok")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r).get("ok")
+    except urllib.error.HTTPError as e:
+        # Telegram hatanın nedenini gövdede yazar (ör. "chat not found", "Unauthorized")
+        print(f"TELEGRAM HATASI {e.code}: {e.read().decode('utf-8', 'replace')}", file=sys.stderr)
+        return False
 
 
 def main():
