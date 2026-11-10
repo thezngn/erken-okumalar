@@ -216,3 +216,11 @@ ol.list .m .chip{font-size:8.5px;padding:0 6px}
 @media(max-width:480px){.tagbtn{font-size:9px;padding:1px 3px 1px 5px;gap:2px}.tagbtn::before{display:none}.tagbtn i{font-size:8px;min-width:11px;padding:0 2px}.tags{gap:3px}}
 @media(max-width:480px){.tagbtn{font-size:8.5px;padding:1px 2px 1px 4px;gap:2px;border-radius:7px}.tagbtn i{font-size:7.5px;min-width:9px;padding:0 2px;background:transparent}.tags{gap:2px}}
 @media(max-width:480px){.tagbtn{font-size:8px;padding:1px 1px 1px 3px;gap:1px}.tagbtn i{font-size:7px;min-width:8px;padding:0 1px}.tags{gap:2px}}
+
+/* --- v6: kompakt bildirim kutusu --- */
+.follow{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin:0 0 14px;padding:8px 12px;border-radius:12px}
+.follow strong{display:inline;font:600 13px system-ui,sans-serif;margin-right:auto}
+.follow p{display:none}
+.follow .btns{display:flex;gap:6px}
+.btn{padding:4px 12px;border-radius:8px;font:600 12px system-ui,sans-serif}
+@media(max-width:480px){.follow{flex-wrap:nowrap;gap:6px;padding:6px 10px}.follow strong{font-size:12px}.btn{padding:3px 9px;font-size:11px}}
