@@ -28,5 +28,15 @@
     "license": "Unsplash License (sayfada: Free to use under the Unsplash License)",
     "verified": "2026-11-10",
     "used_in": "ataturk-10-kasim-ortadogu.html"
+  },
+  {
+    "file": "mekanik-saat-disliler.jpg",
+    "url": "https://images.pexels.com/photos/34182730/pexels-photo-34182730.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://www.pexels.com/photo/close-up-of-intricate-mechanical-watch-gears-34182730/",
+    "author": "Hoàng Anh Nguyễn",
+    "source": "Pexels",
+    "license": "Pexels License (ücretsiz kullanım, atıf zorunlu değil; sayfada: Free, under the Pexels license)",
+    "verified": "2026-11-10",
+    "used_in": "quartz-krizi.html (taslak)"
   }
 ]
