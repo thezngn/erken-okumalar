@@ -135,6 +135,13 @@
 
 <p class="src"><b>Başlıca kaynaklar:</b> PRIF (Temmuz 2026), Reuters/Mining.com (6 Kasım 2026), Rio Times, Discovery Alert, US Treasury (25 Haziran 2026), The Northern Miner/The Economist, Human Rights Watch World Report 2026, UNRIC, S&P Global, Fastmarkets, SMM, SunSirs, Geopolitical Monitor.</p>
 <p class="note">Veri notu: rakamlar 10 Kasım 2026 itibarıyla derlenen kaynaklara dayanır. Bu yazı bilgi amaçlıdır.</p>
+<p class="reads" id="reads"></p>
+<script>
+fetch('https://thezngn.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+  .then(function(r){ return r.ok ? r.json() : null; })
+  .then(function(d){ if (d && d.count) document.getElementById('reads').textContent = d.count + ' kez okundu'; })
+  .catch(function(){});
+</script>
 </main>
 </body>
 </html>
