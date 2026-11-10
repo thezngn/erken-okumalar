@@ -153,3 +153,19 @@ ol.list li:nth-child(4n) .dt{background:var(--sunbg);color:var(--sunt)}
 ol.list a{font-size:20px;line-height:1.35}
 .m{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 @media(max-width:480px){.dt{flex-basis:46px}.dt b{font-size:20px}ol.list a{font-size:18px}}
+
+/* --- v2: etiket düğmeleri + küçük kart etiketleri --- */
+.tags{gap:10px}
+.tagbtn{font:600 14px system-ui,sans-serif;padding:8px 10px 8px 15px;border:0;border-radius:14px;box-shadow:var(--shadow);gap:9px;background:var(--bgc,var(--card));color:var(--fgc,var(--fg));transition:transform .15s,box-shadow .15s,filter .15s}
+.tagbtn:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(60,50,90,.12);border:0;filter:brightness(.98)}
+.tagbtn i{font-size:12.5px;min-width:24px;padding:2px 7px;border-radius:9px;background:var(--card);color:var(--fgc,var(--fg));font-weight:700}
+.tagbtn.k0{--bgc:var(--fg);--fgc:var(--bg)}.tagbtn.k0 i{background:rgba(255,255,255,.2);color:var(--bg)}
+.tagbtn.k1{--bgc:var(--coralbg);--fgc:var(--coralt)}
+.tagbtn.k2{--bgc:var(--tealbg);--fgc:var(--teal)}
+.tagbtn.k3{--bgc:var(--skybg);--fgc:var(--skyt)}
+.tagbtn.k4{--bgc:var(--sunbg);--fgc:var(--sunt)}
+.tagbtn[aria-pressed="true"]{background:var(--fgc);color:var(--bgc);box-shadow:0 4px 12px rgba(60,50,90,.2)}
+.tagbtn[aria-pressed="true"] i{background:rgba(255,255,255,.25);color:var(--bgc)}
+.tagbtn.k0[aria-pressed="true"]{background:var(--coral);color:#fff}
+ol.list .m .chip{font-size:10.5px;padding:1px 8px;font-weight:600}
+ol.list .m{gap:5px}
