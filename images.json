@@ -1,0 +1,22 @@
+[
+  {
+    "file": "guc-bankasi-devre-karti.jpg",
+    "url": "https://images.unsplash.com/photo-1774977870183-b2d62245b543?fm=jpg&q=80&w=1600&auto=format&fit=crop",
+    "page": "https://unsplash.com/photos/close-up-of-an-open-power-bank-circuit-board-eSeXSD0PEOQ",
+    "author": "Adhitya Sibikumar",
+    "source": "Unsplash",
+    "license": "Unsplash License (sayfada: Free to use under the Unsplash License)",
+    "verified": "2026-11-10",
+    "used_in": "kongo-okuma.html"
+  },
+  {
+    "file": "acik-ocak-maden.jpg",
+    "url": "https://images.pexels.com/photos/2892618/pexels-photo-2892618.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://www.pexels.com/photo/mining-excavation-on-a-mountain-2892618/",
+    "author": "Vlad Chețan",
+    "source": "Pexels",
+    "license": "Pexels License (ticari kullanım serbest, atıf zorunlu değil)",
+    "verified": "2026-11-10",
+    "used_in": "kongo-okuma.html"
+  }
+]
