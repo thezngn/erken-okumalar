@@ -213,7 +213,7 @@
   var p=location.pathname, paths=[p, p.replace(/\.html$/,'')];
   setTimeout(function(){
     try{ var q=window.goatcounter && goatcounter.get_data && goatcounter.get_data().p; if(q && paths.indexOf(q)<0) paths.push(q); }catch(e){}
-    first(paths,function(n){ reads.textContent = n+' kez okundu'; });
+    first(paths,function(n){ if(n>0) reads.textContent = n+' kez okundu'; else dbg('sayaç 0'); });
   },600);
   var key='begeni-'+slug, liked=false, server=0;
   var btn=document.getElementById('likeBtn'), cnt=document.getElementById('likeCount');
