@@ -169,3 +169,22 @@ ol.list a{font-size:20px;line-height:1.35}
 .tagbtn.k0[aria-pressed="true"]{background:var(--coral);color:#fff}
 ol.list .m .chip{font-size:10.5px;padding:1px 8px;font-weight:600}
 ol.list .m{gap:5px}
+
+/* --- v3: daha zarif etiketler, küçük kartlar --- */
+.tagbtn{font:600 13px system-ui,sans-serif;padding:6px 8px 6px 12px;border-radius:99px;background:var(--card);color:var(--fg);box-shadow:none;border:1.5px solid var(--bgc,var(--line));gap:8px}
+.tagbtn::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--fgc,var(--fg));flex:none}
+.tagbtn:hover{border:1.5px solid var(--fgc,var(--fg));box-shadow:0 3px 10px rgba(60,50,90,.1);filter:none}
+.tagbtn i{font-size:11.5px;min-width:20px;padding:1px 6px;border-radius:99px;background:var(--bgc,var(--graybg));color:var(--fgc,var(--gray))}
+.tagbtn.k0{--bgc:var(--graybg);--fgc:var(--gray)}.tagbtn.k0 i{background:var(--graybg);color:var(--gray)}
+.tagbtn[aria-pressed="true"],.tagbtn.k0[aria-pressed="true"]{background:var(--fgc);border-color:var(--fgc);color:#fff;box-shadow:0 3px 10px rgba(60,50,90,.18)}
+.tagbtn[aria-pressed="true"]::before{background:#fff}
+.tagbtn[aria-pressed="true"] i,.tagbtn.k0[aria-pressed="true"] i{background:rgba(255,255,255,.25);color:#fff}
+ol.list li{padding:11px 14px;margin-bottom:9px;border-radius:12px}
+ol.list li.js{gap:12px;align-items:center}
+.dt{flex-basis:40px;padding:5px 0 4px;border-radius:9px}
+.dt b{font-size:17px}
+.dt span{font-size:9.5px}
+ol.list a{font-size:16px;line-height:1.35}
+ol.list .m{margin-top:4px;font-size:11px}
+ol.list .m .chip{font-size:9.5px;padding:1px 7px}
+@media(max-width:480px){.dt{flex-basis:36px}.dt b{font-size:15px}ol.list a{font-size:15px}}
