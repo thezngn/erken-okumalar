@@ -193,7 +193,13 @@
   function get(path){
     var url=base+encodeURIComponent(path)+'.json';
     return fetch(url)
-      .then(function(r){ dbg(path+' → HTTP '+r.status); return r.ok ? r.json() : null; })
+      .then(function(r){
+        return r.text().then(function(t){
+          dbg(path+' → HTTP '+r.status+(r.ok?'':' "'+t.slice(0,120).replace(/\s+/g,' ')+'"'));
+          if(!r.ok) return null;
+          try{ return JSON.parse(t); }catch(e){ return null; }
+        });
+      })
       .then(function(d){ return d && d.count ? num(d.count) : null; })
       .catch(function(e){ dbg(path+' → hata: '+e); return null; });
   }
