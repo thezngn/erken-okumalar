@@ -8,8 +8,8 @@ import json, os, sys, time, urllib.error, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-CHAT = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+TOKEN = "".join(os.environ.get("TELEGRAM_BOT_TOKEN", "").split())
+CHAT = "".join(os.environ.get("TELEGRAM_CHAT_ID", "").split())
 
 
 def live(url):
