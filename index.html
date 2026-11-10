@@ -44,5 +44,42 @@
 <li><a href="erteleme-ekonomisi.html">Erteleme Ekonomisi: Bugünün İşini Neden Yarına Bırakırız?</a><div class="m">8 Kasım 2026 &nbsp;<span class="chip c1">Kişisel Gelişim</span> <span class="chip c2">Ekonomi</span> <span class="chip c3">13 dk</span></div></li>
 </ol>
 </main>
+<script>
+(function(){
+var M={Ocak:0,Şubat:1,Mart:2,Nisan:3,Mayıs:4,Haziran:5,Temmuz:6,Ağustos:7,Eylül:8,Ekim:9,Kasım:10,Aralık:11};
+var ol=document.querySelector('ol.list');if(!ol)return;
+var items=[].slice.call(ol.children),active=null,asc=true;
+items.forEach(function(li,i){
+ var m=li.querySelector('.m'),t=m.textContent.match(/(\d+)\s+(\S+)\s+(\d{4})/);
+ var d=t?new Date(+t[3],M[t[2]]||0,+t[1]):new Date(0);
+ li._d=d;li._i=i;li._t=[].map.call(m.querySelectorAll('.c1,.c2,.c4'),function(c){return c.textContent.trim()});
+ var dur=m.querySelector('.c3');
+ m.innerHTML='';li._t.forEach(function(x){var s=document.createElement('span');s.className='chip c'+(x==='O Gün'?1:2);s.textContent=x;m.appendChild(s)});
+ if(dur)m.appendChild(dur);
+ var a=li.querySelector('a'),bd=document.createElement('div');bd.className='bd';bd.appendChild(a);bd.appendChild(m);
+ var b=document.createElement('div');b.className='dt';b.innerHTML='<b>'+d.getDate()+'</b><span>'+(t?t[2].slice(0,3):'')+'</span>';
+ li.className='js';li.appendChild(b);li.appendChild(bd);
+});
+var cnt={};items.forEach(function(li){li._t.forEach(function(x){cnt[x]=(cnt[x]||0)+1})});
+var names=Object.keys(cnt).sort(function(a,b){return cnt[b]-cnt[a]||a.localeCompare(b,'tr')});
+var tools=document.createElement('div');tools.className='tools';
+tools.innerHTML='<div class="row"><span class="count"></span><button class="sort" type="button"></button></div><div class="tags"></div>';
+var tg=tools.querySelector('.tags');
+function btn(label,n,key){var b=document.createElement('button');b.type='button';b.className='tagbtn';b.setAttribute('aria-pressed','false');b.innerHTML=label+' <i>'+n+'</i>';b.onclick=function(){active=(active===key)?null:key;render()};b._k=key;tg.appendChild(b)}
+btn('Tümü',items.length,null);names.forEach(function(n){btn(n,cnt[n],n)});
+ol.parentNode.insertBefore(tools,ol);
+var sb=tools.querySelector('.sort'),ct=tools.querySelector('.count');
+sb.onclick=function(){asc=!asc;render()};
+function render(){
+ var s=items.slice().sort(function(a,b){return (asc?1:-1)*(a._d-b._d)||(asc?1:-1)*(a._i-b._i)});
+ var n=0;s.forEach(function(li){var ok=!active||li._t.indexOf(active)>-1;li.hidden=!ok;if(ok)n++;ol.appendChild(li)});
+ [].forEach.call(tg.children,function(b){b.setAttribute('aria-pressed',String(b._k===active))});
+ ct.innerHTML='<b>'+n+'</b> okuma'+(active?' · '+active:'');
+ sb.textContent=asc?'Takvim: 1 → son':'Takvim: son → 1';
+}
+render();
+})();
+</script>
+
 </body>
 </html>

@@ -127,3 +127,29 @@ ol.list a:hover{color:var(--coralt)}
 .qcard.q4{background:var(--tealbg);color:var(--teal)}
 .qcard.q5{background:var(--graybg);color:var(--gray)}
 .qcard.q6{background:var(--sunbg);color:var(--sunt)}
+
+/* --- Ana sayfa: filtre, sıralama, tarih rozeti --- */
+.tools{margin:0 0 18px}
+.tools .row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;font:14px system-ui,sans-serif;color:var(--muted)}
+.tools .count b{color:var(--fg)}
+.tools .sort{font:600 13px system-ui,sans-serif;cursor:pointer;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+.tools .sort:hover{border-color:var(--coral)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tagbtn{font:600 13px system-ui,sans-serif;cursor:pointer;display:inline-flex;align-items:center;gap:7px;padding:6px 8px 6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--fg);transition:transform .12s,border-color .12s}
+.tagbtn:hover{transform:translateY(-1px);border-color:var(--coral)}
+.tagbtn i{font-style:normal;font-size:12px;min-width:20px;text-align:center;padding:1px 6px;border-radius:99px;background:var(--graybg);color:var(--gray)}
+.tagbtn[aria-pressed="true"]{background:var(--coral);border-color:var(--coral);color:#fff}
+.tagbtn[aria-pressed="true"] i{background:rgba(255,255,255,.28);color:#fff}
+ol.list li.js{display:flex;gap:16px;align-items:flex-start;transition:transform .15s,box-shadow .15s}
+ol.list li.js:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(60,50,90,.1)}
+ol.list li[hidden]{display:none}
+.dt{flex:0 0 54px;text-align:center;border-radius:12px;padding:7px 0 6px;font-family:system-ui,sans-serif;line-height:1.1;background:var(--coralbg);color:var(--coralt)}
+.dt b{display:block;font-size:24px;font-weight:700}
+.dt span{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+ol.list li:nth-child(4n+2) .dt{background:var(--tealbg);color:var(--teal)}
+ol.list li:nth-child(4n+3) .dt{background:var(--skybg);color:var(--skyt)}
+ol.list li:nth-child(4n) .dt{background:var(--sunbg);color:var(--sunt)}
+.bd{min-width:0}
+ol.list a{font-size:20px;line-height:1.35}
+.m{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+@media(max-width:480px){.dt{flex-basis:46px}.dt b{font-size:20px}ol.list a{font-size:18px}}
