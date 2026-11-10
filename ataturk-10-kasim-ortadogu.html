@@ -187,16 +187,28 @@
 (function(){
   var base='https://thezngn.goatcounter.com/counter/';
   var slug=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');
+  var debug=/[?&]debug/.test(location.search), reads=document.getElementById('reads');
+  function dbg(t){ if(debug){ reads.textContent += (reads.textContent?' | ':'')+t; } }
   function num(v){ return parseInt(String(v).replace(/\D/g,''),10)||0; }
-  function get(path,cb){
-    fetch(base+encodeURIComponent(path)+'.json')
-      .then(function(r){ return r.ok ? r.json() : null; })
-      .then(function(d){ if (d && d.count) cb(num(d.count)); })
-      .catch(function(){});
+  function get(path){
+    var url=base+encodeURIComponent(path)+'.json';
+    return fetch(url)
+      .then(function(r){ dbg(path+' → HTTP '+r.status); return r.ok ? r.json() : null; })
+      .then(function(d){ return d && d.count ? num(d.count) : null; })
+      .catch(function(e){ dbg(path+' → hata: '+e); return null; });
   }
-  get(location.pathname,function(n){
-    document.getElementById('reads').textContent = n+' kez okundu';
-  });
+  function first(paths,cb){
+    var i=0;
+    (function next(){
+      if(i>=paths.length) return;
+      get(paths[i++]).then(function(n){ if(n!==null) cb(n); else next(); });
+    })();
+  }
+  var p=location.pathname, paths=[p, p.replace(/\.html$/,'')];
+  setTimeout(function(){
+    try{ var q=window.goatcounter && goatcounter.get_data && goatcounter.get_data().p; if(q && paths.indexOf(q)<0) paths.push(q); }catch(e){}
+    first(paths,function(n){ reads.textContent = n+' kez okundu'; });
+  },600);
   var key='begeni-'+slug, liked=false, server=0;
   var btn=document.getElementById('likeBtn'), cnt=document.getElementById('likeCount');
   try{ liked = localStorage.getItem(key)==='1'; }catch(e){}
@@ -206,7 +218,7 @@
     btn.querySelector('.h').textContent = liked?'♥':'♡';
     cnt.textContent = n ? '· '+n : '';
   }
-  get(key,function(n){ server=n; render(); });
+  get(key).then(function(n){ if(n!==null){ server=Math.max(server,n); render(); } });
   btn.addEventListener('click',function(){
     if(liked) return;
     liked=true; server+=1;
