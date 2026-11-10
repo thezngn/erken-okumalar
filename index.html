@@ -48,7 +48,7 @@
 (function(){
 var M={Ocak:0,Şubat:1,Mart:2,Nisan:3,Mayıs:4,Haziran:5,Temmuz:6,Ağustos:7,Eylül:8,Ekim:9,Kasım:10,Aralık:11};
 var ol=document.querySelector('ol.list');if(!ol)return;
-var items=[].slice.call(ol.children),active=null,asc=true;
+var items=[].slice.call(ol.children),active=null,asc=false;
 items.forEach(function(li,i){
  var m=li.querySelector('.m'),t=m.textContent.match(/(\d+)\s+(\S+)\s+(\d{4})/);
  var d=t?new Date(+t[3],M[t[2]]||0,+t[1]):new Date(0);

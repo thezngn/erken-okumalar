@@ -188,3 +188,7 @@ ol.list a{font-size:16px;line-height:1.35}
 ol.list .m{margin-top:4px;font-size:11px}
 ol.list .m .chip{font-size:9.5px;padding:1px 7px}
 @media(max-width:480px){.dt{flex-basis:36px}.dt b{font-size:15px}ol.list a{font-size:15px}}
+
+/* --- v4: kart satır aralığı (telefon/web tutarlılığı) --- */
+ol.list .bd{line-height:1.35}
+ol.list .bd a{display:block;line-height:1.35}
