@@ -110,3 +110,8 @@ ol.list a:hover{color:var(--coralt)}
 
 .reads{margin:2rem 0 .5rem;text-align:center;font-size:.9em;opacity:.7}
 .reads:empty{display:none}
+
+.like{text-align:center;margin:2rem 0 .5rem}
+.like button{font:inherit;cursor:pointer;padding:.6rem 1.3rem;border-radius:999px;border:1px solid var(--coral);background:var(--coralbg);color:var(--coralt)}
+.like button[aria-pressed="true"]{background:var(--coral);color:#fff;font-weight:600}
+.like button:hover{filter:brightness(.97)}
