@@ -133,14 +133,51 @@
 <h2>Son söz</h2>
 <p>Bu hikâyenin rahatsız edici yanı şu: Kongo yüz yıldan fazladır dünyanın ihtiyaç duyduğu şeyleri sağlıyor. Fildişi, lastik, bakır, kobalt, coltan. Ürün değişiyor, yapı değişmiyor: değer dışarı gidiyor, bedel içeride ödeniyor. Bugün fark, Kinshasa’nın masada oturması ve kozlarının farkında olması. Asıl sınav, imzalanan kâğıtların elektriğe, rafineriye ve güvenli bir doğuya dönüşüp dönüşmeyeceği.</p>
 
+<div class="like">
+<button id="likeBtn" type="button" aria-pressed="false"><span class="h">♡</span> Beğendim <span id="likeCount"></span></button>
+</div>
+
 <p class="src"><b>Başlıca kaynaklar:</b> PRIF (Temmuz 2026), Reuters/Mining.com (6 Kasım 2026), Rio Times, Discovery Alert, US Treasury (25 Haziran 2026), The Northern Miner/The Economist, Human Rights Watch World Report 2026, UNRIC, S&P Global, Fastmarkets, SMM, SunSirs, Geopolitical Monitor.</p>
 <p class="note">Veri notu: rakamlar 10 Kasım 2026 itibarıyla derlenen kaynaklara dayanır. Bu yazı bilgi amaçlıdır.</p>
 <p class="reads" id="reads"></p>
 <script>
-fetch('https://thezngn.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
-  .then(function(r){ return r.ok ? r.json() : null; })
-  .then(function(d){ if (d && d.count) document.getElementById('reads').textContent = d.count + ' kez okundu'; })
-  .catch(function(){});
+(function(){
+  var base='https://thezngn.goatcounter.com/counter/';
+  var slug=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');
+  function num(v){ return parseInt(String(v).replace(/\D/g,''),10)||0; }
+  function get(path,cb){
+    fetch(base+encodeURIComponent(path)+'.json')
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){ if (d && d.count) cb(num(d.count)); })
+      .catch(function(){});
+  }
+  get(location.pathname,function(n){
+    document.getElementById('reads').textContent = n+' kez okundu';
+  });
+  var key='begeni-'+slug, liked=false, server=0;
+  var btn=document.getElementById('likeBtn'), cnt=document.getElementById('likeCount');
+  try{ liked = localStorage.getItem(key)==='1'; }catch(e){}
+  function render(){
+    var n=Math.max(server, liked?1:0);
+    btn.setAttribute('aria-pressed', liked?'true':'false');
+    btn.querySelector('.h').textContent = liked?'♥':'♡';
+    cnt.textContent = n ? '· '+n : '';
+  }
+  get(key,function(n){ server=n; render(); });
+  btn.addEventListener('click',function(){
+    if(liked) return;
+    liked=true; server+=1;
+    try{ localStorage.setItem(key,'1'); }catch(e){}
+    render();
+    var tries=0, t=setInterval(function(){
+      if(window.goatcounter && window.goatcounter.count){
+        clearInterval(t);
+        window.goatcounter.count({path:key, title:'Beğeni: '+slug, event:true});
+      } else if(++tries>50){ clearInterval(t); }
+    },200);
+  });
+  render();
+})();
 </script>
 </main>
 </body>
