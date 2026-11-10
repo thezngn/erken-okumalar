@@ -115,3 +115,15 @@ ol.list a:hover{color:var(--coralt)}
 .like button{font:inherit;cursor:pointer;padding:.6rem 1.3rem;border-radius:999px;border:1px solid var(--coral);background:var(--coralbg);color:var(--coralt)}
 .like button[aria-pressed="true"]{background:var(--coral);color:#fff;font-weight:600}
 .like button:hover{filter:brightness(.97)}
+
+.qcards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:1.2rem 0}
+@media(max-width:560px){.qcards{grid-template-columns:1fr}}
+.qcard{padding:14px 16px;border-radius:14px;border:1px solid var(--line,#e8e1d6)}
+.qcard p{margin:0 0 6px;font-size:1.02em;line-height:1.4;font-weight:600}
+.qcard small{opacity:.75}
+.qcard.q1{background:var(--coralbg);color:var(--coralt)}
+.qcard.q2{background:var(--skybg);color:var(--skyt)}
+.qcard.q3{background:var(--sunbg);color:var(--sunt)}
+.qcard.q4{background:var(--tealbg);color:var(--teal)}
+.qcard.q5{background:var(--graybg);color:var(--gray)}
+.qcard.q6{background:var(--sunbg);color:var(--sunt)}
