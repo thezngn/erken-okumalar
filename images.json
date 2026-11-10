@@ -18,5 +18,15 @@
     "license": "Pexels License (ticari kullanım serbest, atıf zorunlu değil)",
     "verified": "2026-11-10",
     "used_in": "kongo-okuma.html"
+  },
+  {
+    "file": "dolmabahce-sarayi.jpg",
+    "url": "https://images.unsplash.com/photo-1566051102155-bf0e5ad5a345?fm=jpg&q=80&w=1600&auto=format&fit=crop",
+    "page": "https://unsplash.com/photos/dolmabahce-palace-istanbul-turkey-yNehONgZnlI",
+    "author": "Damla Özkan",
+    "source": "Unsplash",
+    "license": "Unsplash License (sayfada: Free to use under the Unsplash License)",
+    "verified": "2026-11-10",
+    "used_in": "ataturk-10-kasim-ortadogu.html"
   }
 ]
