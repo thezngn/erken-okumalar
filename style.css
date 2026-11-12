@@ -305,3 +305,58 @@ li.now h3{font:500 29px/1.16 var(--serif);letter-spacing:-.018em;margin:0 0 10px
 .sig-sun{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 3px var(--sunsoft);margin:0 9px 0 3px;vertical-align:-1px}
 .home .sig{text-align:left;margin:14px 0 0 114px}
 @media (max-width:860px){.home .sig{margin-left:24px}}
+/* --- arşiv bağlantısı (kenar çubuğu) --- */
+.archlink{display:flex;align-items:center;gap:9px;margin-top:10px;padding:10px 12px;border-radius:10px;font:600 13.5px/1 var(--sans);color:var(--ink);text-decoration:none;
+ background:color-mix(in srgb,var(--card) 55%,transparent);border:1px solid color-mix(in srgb,var(--ink) 10%,transparent);transition:border-color .15s,background .15s}
+.archlink svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.archlink i{margin-left:auto;font-style:normal;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--sunbg);color:var(--sunt)}
+.archlink:hover{border-color:var(--accent)}
+.archlink[aria-current="page"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.archlink[aria-current="page"] svg{stroke:var(--sun)}
+@media (max-width:860px){.archlink{margin-top:2px}}
+
+/* --- arşiv sayfası --- */
+.arch .brand h1 a{color:inherit;text-decoration:none}
+.archhead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.archhead h2{font:500 32px/1.1 var(--serif);letter-spacing:-.015em;margin:0}
+.archhead h2::before{display:none}
+.archhead .count{font:500 13px var(--sans);color:var(--muted)}.archhead .count b{color:var(--ink)}
+.filters{display:grid;gap:12px;margin:0 0 30px;padding:16px 18px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.fgroup{display:grid;grid-template-columns:52px minmax(0,1fr);gap:10px;align-items:start}
+.fgroup h3{font:600 12.5px/26px var(--sans);color:var(--muted);margin:0}
+.filters .tags{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;overflow:visible}
+.filters .tagbtn{background:var(--paper)}
+.filters .tagbtn.yr::before{display:none}
+.tagbtn:disabled{opacity:.4;cursor:default}
+.yg{margin:0 0 30px}
+.yh{font:500 26px/1 var(--serif);margin:0 0 14px;display:flex;align-items:baseline;gap:10px}
+.yh i,.mh i{font:600 11.5px var(--sans);font-style:normal;color:var(--muted);background:var(--line2);padding:2px 8px;border-radius:99px}
+.mg{margin:0 0 18px}
+.mh{font:600 13.5px var(--sans);color:var(--muted);margin:0 0 8px;display:flex;align-items:center;gap:8px}
+ol.alist{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+ol.alist li{display:flex;gap:14px;align-items:center;padding:11px 16px;border-top:1px solid var(--line2);position:relative;border-left:3px solid var(--c)}
+ol.alist li:first-child{border-top:0}
+ol.alist li:hover{background:var(--paper)}
+.ad{flex:0 0 34px;text-align:center;font-family:var(--sans);line-height:1}
+.ad b{display:block;font:500 20px/1 var(--serif);color:var(--ink)}
+.ad small{display:block;font-size:10.5px;color:var(--faint);margin-top:3px}
+.ab{min-width:0;flex:1}
+.ab a{display:block;color:var(--ink);text-decoration:none;font:500 16.5px/1.3 var(--serif)}
+.ab a::after{content:"";position:absolute;inset:0}
+ol.alist li:hover .ab a{color:var(--accent)}
+.ab .m{margin-top:5px}
+.empty{font:500 14px var(--sans);color:var(--muted);padding:20px 0}
+.arch .site-foot{margin-left:0}
+.arch .sig{margin-left:0}
+@media (max-width:860px){
+ .filters{padding:12px}
+ .fgroup{grid-template-columns:minmax(0,1fr);gap:6px}
+ .fgroup h3{line-height:1.2}
+ .filters .tags{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -12px;padding:0 12px 2px}
+ .filters .tags::-webkit-scrollbar{display:none}
+ .filters .tagbtn{white-space:nowrap}
+ .archhead h2{font-size:27px}
+ ol.alist li{gap:10px;padding:10px 12px}
+ .ab a{font-size:15.5px}
+}
+.filters .tagbtn[aria-pressed="true"]{background:var(--ink);color:var(--paper)}

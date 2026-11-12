@@ -40,6 +40,7 @@ Plain static HTML and CSS on GitHub Pages. No framework, no build step for the s
 | Part | What it does |
 | --- | --- |
 | `*.html` | One self-contained page per reading |
+| `arsiv.html` | Archive page: every reading grouped by year and month, with topic / year / month filters. Reads the list from `index.html`, so nothing extra to update |
 | `index.html` | Home page: calendar sort, tag filters with counts (computed in the browser) |
 | `style.css` | Shared styles, light and dark theme |
 | `site.js` | Shared script: back-to-top button (with a reading-progress ring on reading pages). Every page must include `<script src="site.js" defer></script>` before `</body>`; a workflow adds it automatically if missing |
