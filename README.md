@@ -42,6 +42,7 @@ Plain static HTML and CSS on GitHub Pages. No framework, no build step for the s
 | `*.html` | One self-contained page per reading |
 | `index.html` | Home page: calendar sort, tag filters with counts (computed in the browser) |
 | `style.css` | Shared styles, light and dark theme |
+| `site.js` | Shared script: back-to-top button (with a reading-progress ring on reading pages). Every page must include `<script src="site.js" defer></script>` before `</body>`; a workflow adds it automatically if missing |
 | `feed.xml`, `feed.xsl` | RSS feed and its human-readable stylesheet |
 | `images.json` | Photo manifest: URL, author, source, license |
 | `.github/workflows/fetch-images.yml` | Downloads the photos listed in `images.json` into `images/` |
