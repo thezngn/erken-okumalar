@@ -1,3 +1,11 @@
+/* Okuma sayfası üst bandı: ortada doğan güneş (ana sayfadaki şafakla aynı). */
+(function(){
+  var h=document.querySelector('.hero');
+  if(!h||document.body.classList.contains('home')||h.querySelector('.sunbox'))return;
+  h.classList.add('dawn');
+  var s=document.createElement('div');s.className='sunbox';s.setAttribute('aria-hidden','true');
+  s.innerHTML='<div class="sun"></div>';h.appendChild(s);
+})();
 /* Başa dön düğmesi (sağ alt). Okuma sayfalarında etrafında okuma ilerlemesi halkası. */
 (function(){
   if(document.querySelector('.totop')) return;
