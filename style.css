@@ -367,3 +367,23 @@ ol.alist li:hover .ab a{color:var(--accent)}
 .arch .side .sig-side{margin-top:auto;padding-top:18px}
 @media (min-width:861px){.home .sig-main{display:none}}
 @media (max-width:860px){.sig-side{display:none}}
+
+/* --- arşiv: yıl/ay açılır menüleri, ana sayfaya dönüş düğmesi --- */
+.archlink.back svg{stroke:var(--accent)}
+.dd{position:relative;display:inline-block}
+.ddbtn{display:inline-flex;align-items:center;gap:7px;font:600 13px/1 var(--sans);padding:7px 10px 7px 12px;border-radius:99px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
+.ddbtn i{font-style:normal;font-size:11px;padding:2px 6px;border-radius:99px;background:rgba(255,255,255,.18)}
+.ddbtn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .15s}
+.ddbtn[aria-expanded="true"] svg{transform:rotate(180deg)}
+.ddbtn:disabled{opacity:.45;cursor:default}
+.ddpop{position:absolute;left:0;top:calc(100% + 6px);z-index:40;min-width:190px;max-height:320px;overflow:auto;padding:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 36px -12px rgba(38,50,59,.35)}
+.ddopt{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:8px 10px;border:0;border-radius:8px;background:transparent;color:var(--ink);font:500 13.5px var(--sans);cursor:pointer;text-align:left}
+.ddopt i{font-style:normal;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:99px;background:var(--line2);color:var(--muted)}
+.ddopt:hover,.ddopt:focus-visible{background:var(--paper);outline:none}
+.ddopt[aria-selected="true"]{background:var(--sunbg);color:var(--sunt)}
+.ddopt[aria-selected="true"] i{background:rgba(255,255,255,.6);color:var(--sunt)}
+.ddopt.all{border-bottom:1px solid var(--line2);border-radius:8px 8px 0 0;margin-bottom:4px}
+.ddopt:disabled{opacity:.4;cursor:default}
+.filters{overflow:visible}
+.fgroup .dd{justify-self:start;text-align:left;width:auto}
+.fgroup h3{line-height:30px}
