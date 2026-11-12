@@ -52,4 +52,6 @@
   var after=home?document.querySelector('.site-foot'):document.querySelector('.backhome');
   if(after&&after.parentNode)after.parentNode.insertBefore(p,after.nextSibling);
   else{var m=document.querySelector('main');if(m)m.appendChild(p)}
+  var side=document.querySelector('.side');
+  if(side){var q=p.cloneNode(true);q.classList.add('sig-side');q.innerHTML=q.innerHTML.replace(' ile yapıldı · ',' ile yapıldı<br>');side.appendChild(q);p.classList.add('sig-main')}
 })();

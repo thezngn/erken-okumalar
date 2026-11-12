@@ -360,3 +360,10 @@ ol.alist li:hover .ab a{color:var(--accent)}
  .ab a{font-size:15.5px}
 }
 .filters .tagbtn[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* imza: masaüstünde sol panelin altında, telefonda sayfa sonunda */
+.side .sig-side{text-align:left;margin:20px 0 0;font-size:11px;line-height:1.65;color:var(--faint);padding-left:18px;text-indent:-18px}
+.sig-side .sig-sun{width:9px;height:9px;box-shadow:0 0 0 2px var(--sunsoft);margin:0 7px 0 2px}
+.arch .side .sig-side{margin-top:auto;padding-top:18px}
+@media (min-width:861px){.home .sig-main{display:none}}
+@media (max-width:860px){.sig-side{display:none}}
