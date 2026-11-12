@@ -233,3 +233,9 @@ li.now h3{font:500 29px/1.16 var(--serif);letter-spacing:-.018em;margin:0 0 10px
  .site-foot{margin-left:24px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* masaüstü: bağlantılar çerçevesiz */
+@media (min-width:861px){
+ .follow{gap:2px}
+ .follow .btn{border-color:transparent;padding:7px 0;background:transparent}
+ .follow .btn:hover{border-color:transparent;background:transparent;color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+}
