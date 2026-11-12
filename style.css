@@ -298,3 +298,10 @@ li.now h3{font:500 29px/1.16 var(--serif);letter-spacing:-.018em;margin:0 0 10px
 .backhome .bh-ar{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--sunbg);color:var(--sunt);font-size:18px;line-height:1}
 .backhome b{display:block;font-size:15px;font-weight:600}
 .backhome small{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+/* --- imza satırı --- */
+.sig{display:block;margin:28px 0 0;font:500 12.5px/1.5 var(--sans);color:var(--faint);text-align:center}
+.sig a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.sig a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.sig-sun{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 3px var(--sunsoft);margin:0 9px 0 3px;vertical-align:-1px}
+.home .sig{text-align:left;margin:14px 0 0 114px}
+@media (max-width:860px){.home .sig{margin-left:24px}}

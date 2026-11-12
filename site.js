@@ -41,3 +41,15 @@
   a.innerHTML='<span class="bh-ar" aria-hidden="true">←</span><span><b>Ana sayfaya dön</b><small>Tüm okumalar, Claude ile Erken Okumalar</small></span>';
   m.appendChild(a);
 })();
+
+/* İmza satırı: ana sayfada alt notun altında, okuma sayfalarında ana sayfa kartının altında. */
+(function(){
+  if(document.querySelector('.sig'))return;
+  var y=new Date().getFullYear(),yr=y>2026?'2026–'+y:'2026';
+  var p=document.createElement('p');p.className='sig';
+  p.innerHTML='<span class="sig-sun" aria-hidden="true"></span><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a> (Anthropic) ile yapıldı · <a href="https://substack.com/@emrahzengin" target="_blank" rel="noopener">Emrah Zengin</a> · '+yr;
+  var home=document.body.classList.contains('home');
+  var after=home?document.querySelector('.site-foot'):document.querySelector('.backhome');
+  if(after&&after.parentNode)after.parentNode.insertBefore(p,after.nextSibling);
+  else{var m=document.querySelector('main');if(m)m.appendChild(p)}
+})();
