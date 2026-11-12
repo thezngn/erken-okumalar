@@ -292,3 +292,10 @@ li.now h3{font:500 29px/1.16 var(--serif);letter-spacing:-.018em;margin:0 0 10px
 .hero.dawn{height:124px}
 .hero.dawn .sunbox{position:absolute;left:50%;bottom:50px;margin-left:-27px;z-index:4}
 @media (max-width:860px){.hero.dawn .sunbox{position:absolute;width:54px;height:54px}.hero.dawn .sunbox .sun{left:8px;top:8px;width:38px;height:38px;box-shadow:0 0 0 8px var(--sunsoft);animation-name:sunrise,sunglow}}
+
+/* --- okuma sonu: ana sayfa bağlantısı --- */
+.backhome{display:flex;align-items:center;gap:14px;margin:40px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);text-decoration:none;font-family:var(--sans);transition:border-color .15s}
+.backhome:hover{border-color:var(--accent);text-decoration:none}
+.backhome .bh-ar{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--sunbg);color:var(--sunt);font-size:18px;line-height:1}
+.backhome b{display:block;font-size:15px;font-weight:600}
+.backhome small{display:block;font-size:13px;color:var(--muted);margin-top:2px}
