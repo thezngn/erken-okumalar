@@ -18,6 +18,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/ensure_site_js.py
+      - run: python scripts/ensure_og.py
       - name: Kaydet
         run: |
           git config user.name "github-actions[bot]"
