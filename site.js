@@ -55,3 +55,12 @@
   var side=document.querySelector('.side');
   if(side){var q=p.cloneNode(true);q.classList.add('sig-side');q.innerHTML=q.innerHTML.replace(' ile yapıldı · ',' ile yapıldı<br>');side.appendChild(q);p.classList.add('sig-main')}
 })();
+
+/* Arşiv sayacı boşsa (abone gibi sayfalarda) ana sayfadaki listeden say. */
+(function(){
+  var c=document.querySelector('.archcount');if(!c||c.textContent.trim())return;
+  fetch('index.html',{cache:'no-cache'}).then(function(r){return r.text()}).then(function(t){
+    var n=new DOMParser().parseFromString(t,'text/html').querySelectorAll('ol.list > li').length;
+    if(n&&!c.textContent.trim())c.textContent=n;
+  }).catch(function(){});
+})();
