@@ -387,3 +387,8 @@ ol.alist li:hover .ab a{color:var(--accent)}
 .filters{overflow:visible}
 .fgroup .dd{justify-self:start;text-align:left;width:auto}
 .fgroup h3{line-height:30px}
+
+.ddopt span{display:inline-flex;align-items:center;gap:8px}
+.dd .cdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c);flex:none}
+.ddbtn .cdot{box-shadow:0 0 0 2px rgba(255,255,255,.25);margin-right:1px}
+.dd[data-k="tag"] .ddpop{min-width:220px}
