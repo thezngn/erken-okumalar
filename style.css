@@ -424,3 +424,20 @@ ol.alist li:hover .ab a{color:var(--accent)}
 .mc-desc{font:400 15.5px/1.55 var(--serif);color:#64727c;margin-bottom:16px}
 .mc-btn{display:inline-block;background:#4f6797;color:#fff;font-weight:600;font-size:14px;padding:9px 16px;border-radius:99px}
 @media (max-width:600px){.subrow{flex-direction:column}.subrow button{width:100%}.subform{padding:18px 16px 14px}.sublead{font-size:17px}}
+
+/* --- kenar çubuğu: Abone ol kutusu (Telegram + E-posta), GitHub ayrı küçük bağlantı --- */
+.subbox{margin:6px 0 0;padding:14px 14px 14px;border-radius:14px;background:color-mix(in srgb,var(--card) 60%,transparent);border:1px solid color-mix(in srgb,var(--ink) 9%,transparent)}
+.subbox h2{font:600 15px/1.2 var(--sans);margin:0;color:var(--ink)}
+.subbox h2::before{display:none}
+.subbox p{font:400 13px/1.45 var(--sans);color:var(--muted);margin:4px 0 12px}
+.subbtns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.subbtns .btn{justify-content:center;gap:7px;padding:10px 8px;border-radius:10px;font:600 13.5px/1 var(--sans);border:0;text-decoration:none;transition:filter .15s,transform .15s}
+.subbtns .btn:hover{filter:brightness(.97);transform:translateY(-1px);text-decoration:none;color:inherit}
+.subbtns .btn svg{width:15px;height:15px}
+.subbtns .btn.tg{background:var(--skybg);color:var(--skyt)}.subbtns .btn.tg svg{fill:var(--skyt)}
+.subbtns .btn.mail{background:linear-gradient(145deg,#f6cf8e,#eaa94f);color:#3a2a10}.subbtns .btn.mail svg{fill:#3a2a10}
+.subbtns .btn[aria-current="page"]{box-shadow:0 0 0 2px var(--ink)}
+.ghlink{display:inline-flex;align-items:center;gap:7px;font:500 12.5px var(--sans);color:var(--muted);text-decoration:none;margin-top:2px}
+.ghlink svg{width:13px;height:13px;fill:currentColor}
+.ghlink:hover{color:var(--accent)}
+@media (max-width:860px){.subbox{margin-top:2px;padding:12px}.subbtns .btn{padding:11px 8px}}
