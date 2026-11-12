@@ -47,7 +47,7 @@
   if(document.querySelector('.sig'))return;
   var y=new Date().getFullYear(),yr=y>2026?'2026–'+y:'2026';
   var p=document.createElement('p');p.className='sig';
-  p.innerHTML='<span class="sig-sun" aria-hidden="true"></span><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a> (Anthropic) ile yapıldı · <a href="https://substack.com/@emrahzengin" target="_blank" rel="noopener">Emrah Zengin</a> · '+yr;
+  p.innerHTML='<span class="sig-sun" aria-hidden="true"></span><a href="https://claude.ai" target="_blank" rel="noopener">Claude</a> (Anthropic) ile yapıldı · <span class="sig-name">Emrah Zengin</span> · '+yr;
   var home=document.body.classList.contains('home');
   var after=home?document.querySelector('.site-foot'):document.querySelector('.backhome');
   if(after&&after.parentNode)after.parentNode.insertBefore(p,after.nextSibling);
