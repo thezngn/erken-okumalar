@@ -5,6 +5,11 @@ on:
     paths:
       - "feed.xml"
   workflow_dispatch:
+    inputs:
+      check:
+        description: "Sadece ayarları kontrol et, e-posta gönderme"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -27,7 +32,7 @@ jobs:
           BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
           BREVO_SENDER_EMAIL: ${{ secrets.BREVO_SENDER_EMAIL }}
           BREVO_SENDER_NAME: ${{ secrets.BREVO_SENDER_NAME }}
-        run: python scripts/notify_email.py
+        run: python scripts/notify_email.py ${{ github.event_name == 'workflow_dispatch' && inputs.check && '--check' || '' }}
       - name: Durumu kaydet
         if: always()
         run: |

@@ -84,6 +84,17 @@ def main():
         open(os.path.join(ROOT, "email-preview.html"), "w", encoding="utf-8").write(build(newest)[2])
         print("email-preview.html yazıldı")
         return
+    if "--check" in sys.argv:
+        print("BREVO_API_KEY:", "var" if KEY else "YOK")
+        print("BREVO_LIST_ID:", LIST or "YOK")
+        print("BREVO_SENDER_EMAIL:", (SENDER[:2] + "…@" + SENDER.split("@")[-1]) if "@" in SENDER else ("YOK" if not SENDER else "geçersiz görünüyor"))
+        if not (KEY and LIST and SENDER):
+            sys.exit(1)
+        code, _ = api("/emailCampaigns?limit=1", method="GET")
+        print("Kampanya izni:", "çalışıyor" if code == 200 else f"HATA {code}")
+        code2, lst = api(f"/contacts/lists/{int(LIST)}", method="GET")
+        print("Liste:", (lst or {}).get("name", "?") + f" (abone: {(lst or {}).get('uniqueSubscribers', (lst or {}).get('totalSubscribers', '?'))})" if code2 == 200 else f"HATA {code2}")
+        sys.exit(0 if code == 200 and code2 == 200 else 1)
     if not (KEY and LIST and SENDER):
         print("Brevo anahtarları tanımlı değil, e-posta atlandı.")
         return
