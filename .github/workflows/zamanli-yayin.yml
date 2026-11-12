@@ -1,0 +1,38 @@
+name: Zamanlı yayın (13 Kasım 07:45)
+
+on:
+  schedule:
+    - cron: "45 4 13 11 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  yayin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Akış öğesini ekle
+        run: |
+          python3 - <<'PY'
+          slug='derin-calisma'
+          title='Derin Çalışma ve Dikkat: Telefon Masada Dururken Ne Oluyor?'
+          desc='Dikkat dağınıklığının bedeli: 47 saniye rakamı, 2008 kesinti deneyi, dikkat kalıntısı, “beyin kaybı” çalışması ve tekrarlanamaması, Newport’un derin çalışma çerçevesi.'
+          f=open('feed.xml',encoding='utf-8').read()
+          if slug+'.html' in f: raise SystemExit
+          item='<item>\n<title>%s</title>\n<link>https://thezngn.github.io/erken-okumalar/%s.html</link>\n<guid>https://thezngn.github.io/erken-okumalar/%s.html</guid>\n<pubDate>Fri, 13 Nov 2026 04:45:00 +0000</pubDate>\n<description>%s 13 dakikalık okuma.</description>\n</item>\n'%(title,slug,slug,desc)
+          open('feed.xml','w',encoding='utf-8').write(f.replace('</channel>',item+'</channel>',1))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add feed.xml
+          git diff --cached --quiet && exit 0
+          git commit -m "13 Kasım okuması (akış, zamanlı)"
+          git pull --rebase -q && git push
+          # GITHUB_TOKEN ile yapılan push başka iş akışını tetiklemez, bu yüzden elle çağırıyoruz
+          gh workflow run notify.yml
+          gh workflow run email.yml -f check=false
+        env:
+          GH_TOKEN: ${{ github.token }}
