@@ -394,3 +394,33 @@ ol.alist li:hover .ab a{color:var(--accent)}
 .dd[data-k="tag"] .ddpop{min-width:220px}
 
 .sig-name{color:var(--muted)}
+
+/* --- e-posta düğmesi ve abone sayfası --- */
+.btn.mail svg{fill:var(--accent)}
+.btn[aria-current="page"]{color:var(--accent)}
+.subpage .archhead{margin-bottom:14px}
+.sublead{font:400 19px/1.6 var(--serif);color:var(--muted);margin:0 0 26px;max-width:600px}
+.subform{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;max-width:600px;box-shadow:var(--shadow)}
+.subform label{display:block;font:600 13px var(--sans);color:var(--muted);margin:0 0 8px}
+.subrow{display:flex;gap:8px}
+.subrow input{flex:1;min-width:0;font:400 16px var(--sans);padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.subrow input:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.subrow button{flex:none;font:600 15px var(--sans);padding:12px 18px;border:0;border-radius:12px;cursor:pointer;background:linear-gradient(145deg,#f6cf8e,#eaa94f);color:#3a2a10;box-shadow:0 6px 16px -6px rgba(234,169,79,.7)}
+.subrow button:disabled,.subrow input:disabled{opacity:.55;cursor:default}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.subnote{font:13px/1.55 var(--sans);color:var(--faint);margin:12px 0 0}
+.submsg{font:500 14px/1.5 var(--sans);margin:12px 0 0;color:var(--muted)}
+.submsg:empty{display:none}
+.submsg.ok{color:var(--teal)}.submsg.err{color:var(--coralt)}
+.subform.soon .submsg{padding:10px 12px;border-radius:10px;background:var(--sunbg);color:var(--sunt)}
+.subform.done .subrow{opacity:.6}
+.subprev{margin:36px 0 0;max-width:600px}
+.subprev h3{font:600 13px var(--sans);color:var(--muted);margin:0 0 10px}
+.mailcard{background:#fff;color:#26323b;border:1px solid var(--line);border-radius:16px;padding:22px 24px;font-family:var(--sans)}
+.mc-top{display:flex;align-items:center;gap:10px;font:500 15px var(--serif);padding-bottom:14px;border-bottom:1px solid #edf1ef;margin-bottom:16px}
+.mc-sun{width:18px;height:18px;border-radius:50%;background:#f1c27d;box-shadow:0 0 0 4px #f8e6c8}
+.mc-when{font-size:12.5px;color:#87642a;margin-bottom:6px}
+.mc-title{font:500 23px/1.2 var(--serif);margin-bottom:8px}
+.mc-desc{font:400 15.5px/1.55 var(--serif);color:#64727c;margin-bottom:16px}
+.mc-btn{display:inline-block;background:#4f6797;color:#fff;font-weight:600;font-size:14px;padding:9px 16px;border-radius:99px}
+@media (max-width:600px){.subrow{flex-direction:column}.subrow button{width:100%}.subform{padding:18px 16px 14px}.sublead{font-size:17px}}

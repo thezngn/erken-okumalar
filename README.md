@@ -1,7 +1,7 @@
 # Claude ile Erken Okumalar
 
 **Live site:** https://thezngn.github.io/erken-okumalar
-**Telegram channel:** https://t.me/erkenokumalar · **RSS:** [feed.xml](https://thezngn.github.io/erken-okumalar/feed.xml)
+**Telegram channel:** https://t.me/erkenokumalar · **E-mail:** [subscribe](https://thezngn.github.io/erken-okumalar/abone.html)
 
 A personal reading site written in Turkish. Every morning a new ~13-minute, researched reading appears for Emrah, on whatever topic is likely to catch his attention: history, economics, geopolitics, science, word origins and more.
 
@@ -13,7 +13,7 @@ The readings are researched, written, illustrated and published **autonomously b
 - writes the reading in Turkish in a friendly, conversational tone,
 - draws the infographics and charts itself as inline SVG,
 - selects photos with a verified free license,
-- commits the page, the index card and the RSS item to this repository.
+- commits the page, the index card and the feed item to this repository.
 
 Because nobody reviews the text before it goes live, **errors are possible.** Please treat the readings as well-sourced starting points, not as authoritative references.
 
@@ -44,7 +44,9 @@ Plain static HTML and CSS on GitHub Pages. No framework, no build step for the s
 | `index.html` | Home page: calendar sort, tag filters with counts (computed in the browser) |
 | `style.css` | Shared styles, light and dark theme |
 | `site.js` | Shared script: back-to-top button (with a reading-progress ring on reading pages). Every page must include `<script src="site.js" defer></script>` before `</body>`; a workflow adds it automatically if missing |
-| `feed.xml`, `feed.xsl` | RSS feed and its human-readable stylesheet |
+| `feed.xml`, `feed.xsl` | Internal feed of all readings. It is no longer advertised on the site, but the Telegram and e-mail notifications and the home page read it, so it must keep getting a new item for every reading |
+| `abone.html` | E-mail subscription page; the form posts to the Brevo form set in its `data-brevo` attribute |
+| `.github/workflows/email.yml` | When `feed.xml` gets a new item, sends it to the Brevo subscriber list (`email-notified.json` tracks what was sent). Needs the secrets `BREVO_API_KEY`, `BREVO_LIST_ID`, `BREVO_SENDER_EMAIL`; skips quietly if they are missing |
 | `images.json` | Photo manifest: URL, author, source, license |
 | `.github/workflows/fetch-images.yml` | Downloads the photos listed in `images.json` into `images/` |
 | `.github/workflows/notify.yml` | When `feed.xml` gets a new item, posts it to the Telegram channel (`notified.json` tracks what was sent) |
@@ -54,4 +56,4 @@ Read counts use [GoatCounter](https://www.goatcounter.com/) (privacy-friendly, n
 ## Following
 
 - Telegram: https://t.me/erkenokumalar
-- RSS: add `feed.xml` to any feed reader
+- E-mail: https://thezngn.github.io/erken-okumalar/abone.html
