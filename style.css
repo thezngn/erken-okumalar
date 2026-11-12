@@ -145,7 +145,7 @@ figure.chart svg{width:100%;height:auto;display:block}
 .h4{--c:var(--lav);--cb:var(--graybg);--ct:var(--gray)}
 .h5{--c:var(--aqua);--cb:var(--aquabg);--ct:var(--aquat)}
 .lay{display:grid;grid-template-columns:330px minmax(0,1fr);min-height:100vh}
-.side{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:44px 26px 32px;background:var(--side);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:16px}
+.side{position:sticky;top:0;align-self:start;height:100vh;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin;padding:44px 26px 32px;background:var(--side);border-right:1px solid var(--line);display:flex;flex-direction:column;gap:16px}
 .sun{width:38px;height:38px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 8px var(--sunsoft)}
 .home h1{font:500 36px/1.08 var(--serif);letter-spacing:-.02em;margin:10px 0 0}
 .sub{font:400 16.5px/1.6 var(--serif);color:var(--muted);margin:0}
@@ -156,9 +156,10 @@ figure.chart svg{width:100%;height:auto;display:block}
 .btn:hover{border-color:var(--faint)}
 .btn svg{width:14px;height:14px;fill:currentColor}
 .btn.tg svg{fill:var(--skyt)}.btn.rss svg{fill:var(--sunt)}.btn.ss svg{fill:var(--coralt)}.btn.gh svg{fill:var(--ink)}
-.follow{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.follow .btn{justify-content:center}
-@media (max-width:860px){.follow{grid-template-columns:repeat(4,auto);justify-content:start}}
+.follow{display:flex;flex-direction:column;gap:6px;min-width:0}
+.follow .btn{justify-content:flex-start;gap:9px;padding:9px 12px;font-size:13px;min-width:0}
+.side>*{min-width:0;max-width:100%;flex-shrink:0}
+@media (max-width:860px){.follow{display:grid;flex-direction:row;grid-template-columns:repeat(4,auto);justify-content:start}.follow .btn{justify-content:center;gap:5px;padding:8px 10px;font-size:12.5px}}
 @media (max-width:420px){.follow{grid-template-columns:repeat(4,1fr)}.follow .btn{padding:8px 4px;font-size:12px;gap:4px}}
 .tagbox{margin-top:auto}
 .tagbox h2{font:600 12.5px var(--sans);color:var(--muted);margin:0 0 8px}
