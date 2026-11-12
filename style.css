@@ -459,3 +459,5 @@ ol.alist li:hover .ab a{color:var(--accent)}
 .like.withshare .sharebtn{padding:10px 20px}
 .share{margin-top:0}
 @media (max-width:480px){.so.copy.wide{grid-column:1/-1}}
+
+.so .slogo{width:20px;height:20px;border-radius:5px;flex:none;display:block}
