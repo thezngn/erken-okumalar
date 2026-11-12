@@ -260,3 +260,14 @@ li.now h3{font:500 29px/1.16 var(--serif);letter-spacing:-.018em;margin:0 0 10px
  @keyframes sunglow-s{from{box-shadow:0 0 0 0 var(--sunsoft)}to{box-shadow:0 0 0 4px var(--sunsoft)}}
  .side{padding-top:72px}
 }
+/* --- şafak: güneş doğarken panel geceden güne açılır --- */
+.side::before,.side::after,.brand::before,.brand::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none}
+.side::before,.brand::before{background:linear-gradient(180deg,#141a33 0%,#262a4d 40%,#45395f 75%,#6b4a66 100%);animation:night 1.7s ease-in .1s both}
+.side::after,.brand::after{background:linear-gradient(180deg,#8a6a8f 0%,#d9a3a6 50%,#f4c99a 100%);opacity:0;animation:blush 2.6s ease-out .1s both}
+@keyframes night{0%,15%{opacity:1}100%{opacity:0}}
+@keyframes blush{0%{opacity:0}35%{opacity:.75}55%{opacity:.6}100%{opacity:0}}
+.sunbox{z-index:2}
+@media (max-width:860px){
+ .side{position:relative;z-index:0}
+ .brand::before,.brand::after{z-index:1}
+}
