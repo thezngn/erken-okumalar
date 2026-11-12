@@ -461,3 +461,15 @@ ol.alist li:hover .ab a{color:var(--accent)}
 @media (max-width:480px){.so.copy.wide{grid-column:1/-1}}
 
 .so .slogo{width:20px;height:20px;border-radius:5px;flex:none;display:block}
+
+/* --- açık tema: şafak paleti (üstte kayısı ışığı, aşağıda serin nane-lavanta) --- */
+@media (prefers-color-scheme: light){
+ :root{--side:radial-gradient(130% 42% at 14% 0%,rgba(248,206,160,.55) 0%,rgba(248,206,160,0) 70%),linear-gradient(180deg,#fbeee2 0%,#f6efe8 22%,#ebf4ef 52%,#e9edf6 80%,#f1eaf1 100%)}
+}
+/* kenar çubuğundaki konu etiketleri: şeffaf, sakin */
+.tagbox .tagbtn:not([aria-pressed="true"]){background:transparent;border-color:transparent;padding-left:4px}
+.tagbox .tagbtn:not([aria-pressed="true"]):hover{border-color:color-mix(in srgb,var(--ink) 18%,transparent);background:color-mix(in srgb,var(--card) 40%,transparent)}
+.tagbox .tags{gap:2px 4px}
+/* Telegram düğmesi E-posta ile dengeli */
+.subbtns .btn.tg{background:linear-gradient(145deg,#d7e6f7,#bcd3ef);color:#2f5384}.subbtns .btn.tg svg{fill:#2f5384}
+@media (prefers-color-scheme: dark){.subbtns .btn.tg{background:linear-gradient(145deg,#2a3a52,#22314a);color:#cfe0f5}.subbtns .btn.tg svg{fill:#cfe0f5}}
