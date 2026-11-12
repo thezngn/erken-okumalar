@@ -35,7 +35,7 @@
 <div class="archhead"><h2>E-posta ile abone ol</h2></div>
 <p class="sublead">Her sabah 07.45’te yeni okuma e-postana gelsin. Başlık, kısa bir özet ve okumaya giden bağlantı. Ücretsiz, istediğin an tek tıkla çıkabilirsin.</p>
 
-<form class="subform" id="subform" data-brevo="" method="POST" target="_blank" novalidate>
+<form class="subform" id="subform" data-brevo="https://bcd35c38.sibforms.com/serve/MUIFAL7vX7BmzUInywzAgtGVIN8PJNZz05H_YaA317PnXMjGDr8bDMdAJRC9KRc5UIMTTLKH7BIAwVjnIhB_Rd5eWQpV6aJ10gFXiDugMFfxIe7Z4S7VYApyCCswHSrsUryosEm6zEU7Ktip5R3yfFH1EIqfeKx8ztRjVRsEiDYG_eJHWR-QPAnWEinISb1bC-zxjUkIiVE5a2ELzw==" method="POST" target="_blank" novalidate>
 <label for="EMAIL">E-posta adresin</label>
 <div class="subrow">
 <input type="email" id="EMAIL" name="EMAIL" autocomplete="email" inputmode="email" placeholder="ornek@eposta.com" required>
@@ -71,6 +71,7 @@ if(!url){
  return;
 }
 f.action=url;
+if(/[?&]onay=1/.test(location.search)){f.classList.add('done');msg.className='submsg ok';msg.textContent='Aboneliğin onaylandı. Yarın sabah 07.45’te ilk okuma e-postana gelecek.';}
 f.addEventListener('submit',function(e){
  e.preventDefault();
  var v=inp.value.trim();
