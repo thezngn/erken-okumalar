@@ -441,3 +441,21 @@ ol.alist li:hover .ab a{color:var(--accent)}
 .ghlink svg{width:13px;height:13px;fill:currentColor}
 .ghlink:hover{color:var(--accent)}
 @media (max-width:860px){.subbox{margin-top:2px;padding:12px}.subbtns .btn{padding:11px 8px}}
+/* --- okuma sonu: paylaş --- */
+.share{text-align:center;margin:18px 0 0}
+.sharebtn{display:inline-flex;align-items:center;gap:8px;font:600 15px var(--sans);cursor:pointer;padding:10px 20px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink);transition:border-color .15s}
+.sharebtn svg,.so svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sharebtn:hover,.share.open .sharebtn{border-color:var(--accent);color:var(--accent)}
+.sharepop{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px auto 0;max-width:560px}
+.sharepop[hidden]{display:none}
+.so{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 14px var(--sans);text-decoration:none;cursor:pointer;transition:border-color .15s,transform .15s}
+.so:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px);text-decoration:none}
+.so.native svg circle{fill:currentColor;stroke:none}
+.sharemsg{font:500 13px var(--sans);color:var(--teal);margin:10px 0 0;min-height:1em}
+.sharemsg:empty{margin:0;min-height:0}
+@media (max-width:480px){.sharepop{display:grid;grid-template-columns:1fr 1fr}.so{justify-content:center}}
+
+.like.withshare{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:10px}
+.like.withshare .sharebtn{padding:10px 20px}
+.share{margin-top:0}
+@media (max-width:480px){.so.copy.wide{grid-column:1/-1}}

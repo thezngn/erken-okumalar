@@ -64,3 +64,50 @@
     if(n&&!c.textContent.trim())c.textContent=n;
   }).catch(function(){});
 })();
+
+/* Okuma sonunda paylaş düğmesi: WhatsApp, X, LinkedIn, Telegram, bağlantıyı kopyala, (telefonda) diğer. */
+(function(){
+  if(document.body.classList.contains('home')||document.querySelector('.share'))return;
+  var h1=document.querySelector('h1'),m=document.querySelector('main');if(!h1||!m)return;
+  var url=location.origin+location.pathname,title=h1.textContent.trim(),e=encodeURIComponent;
+  var I={
+    chat:'<path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/>',
+    post:'<path d="M9 4 7 20M17 4l-2 16M4 9h16M3 15h16"/>',
+    work:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
+    plane:'<path d="m21 4-18 7 6 2 2 6 3-4 5 4 2-15Z"/>',
+    link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+    more:'<circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/>',
+    share:'<path d="M12 15V3M7 8l5-5 5 5M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>'
+  };
+  function ic(k){return '<svg viewBox="0 0 24 24" aria-hidden="true">'+I[k]+'</svg>'}
+  var opts=[
+    ['WhatsApp','chat','https://wa.me/?text='+e(title+' '+url)],
+    ['X','post','https://x.com/intent/post?text='+e(title)+'&url='+e(url)],
+    ['LinkedIn','work','https://www.linkedin.com/sharing/share-offsite/?url='+e(url)],
+    ['Telegram','plane','https://t.me/share/url?url='+e(url)+'&text='+e(title)]
+  ];
+  var w=document.createElement('section');w.className='share';w.setAttribute('aria-label','Bu okumayı paylaş');
+  var h='<button type="button" class="sharebtn" aria-expanded="false" aria-controls="sharepop">'+ic('share')+'Paylaş</button>'+
+    '<div class="sharepop" id="sharepop" hidden>';
+  opts.forEach(function(o){h+='<a class="so" href="'+o[2]+'" target="_blank" rel="noopener">'+ic(o[1])+'<span>'+o[0]+'</span></a>'});
+  h+='<button type="button" class="so copy">'+ic('link')+'<span>Bağlantıyı kopyala</span></button>';
+  if(navigator.share)h+='<button type="button" class="so native">'+ic('more')+'<span>Diğer</span></button>';
+  h+='</div><p class="sharemsg" role="status" aria-live="polite"></p>';
+  w.innerHTML=h;
+  var like=document.querySelector('.like'),home=document.querySelector('.backhome');
+  if(like&&like.parentNode)like.parentNode.insertBefore(w,like.nextSibling);
+  else if(home)home.parentNode.insertBefore(w,home);else m.appendChild(w);
+  var btn=w.querySelector('.sharebtn'),pop=w.querySelector('.sharepop'),msg=w.querySelector('.sharemsg');
+  if(like){like.classList.add('withshare');like.appendChild(btn)}
+  if(!w.querySelector('.native'))w.querySelector('.copy').classList.add('wide');
+  function set(open){pop.hidden=!open;btn.setAttribute('aria-expanded',String(open));w.classList.toggle('open',open)}
+  btn.onclick=function(){set(pop.hidden)};
+  document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!pop.hidden){set(false);btn.focus()}});
+  w.querySelector('.copy').onclick=function(){
+    function ok(){msg.textContent='Bağlantı kopyalandı.';setTimeout(function(){msg.textContent=''},2500)}
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(url).then(ok,function(){prompt('Bağlantıyı kopyala:',url)});
+    else{var t=document.createElement('textarea');t.value=url;document.body.appendChild(t);t.select();try{document.execCommand('copy');ok()}catch(x){}t.remove()}
+  };
+  var nat=w.querySelector('.native');
+  if(nat)nat.onclick=function(){navigator.share({title:title,url:url}).catch(function(){})};
+})();
