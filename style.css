@@ -152,8 +152,8 @@ figure.chart svg{width:100%;height:auto;display:block}
 .repo{font:500 12px/1.4 var(--sans);color:var(--faint);margin:-6px 0 0;word-break:break-all}
 .repo a{color:var(--muted)}
 .follow{display:flex;gap:6px}
-.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 10px;border-radius:10px;font:600 12.5px/1 var(--sans);text-decoration:none;background:var(--card);color:var(--ink);border:1px solid var(--line);transition:border-color .15s}
-.btn:hover{border-color:var(--faint)}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:8px 10px;border-radius:10px;font:600 12.5px/1 var(--sans);text-decoration:none;background:transparent;color:var(--ink);border:1px solid color-mix(in srgb,var(--ink) 16%,transparent);transition:border-color .15s,background .15s}
+.btn:hover{border-color:color-mix(in srgb,var(--ink) 35%,transparent);background:color-mix(in srgb,var(--card) 35%,transparent)}
 .btn svg{width:14px;height:14px;fill:currentColor}
 .btn.tg svg{fill:var(--skyt)}.btn.rss svg{fill:var(--sunt)}.btn.ss svg{fill:var(--coralt)}.btn.gh svg{fill:var(--ink)}
 .follow{display:flex;flex-direction:column;gap:6px;min-width:0}
