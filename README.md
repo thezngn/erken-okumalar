@@ -35,21 +35,41 @@ Found a mistake? Please open an issue in this repository.
 
 ## How it works
 
-Plain static HTML and CSS on GitHub Pages. No framework, no build step for the site itself.
+Plain static HTML, CSS and a small shared script on GitHub Pages. No framework, no build step for the site itself.
 
-| Part | What it does |
+### Pages
+
+| File | What it is |
 | --- | --- |
-| `*.html` | One self-contained page per reading |
-| `arsiv.html` | Archive page: every reading grouped by year and month, with topic / year / month filters. Reads the list from `index.html`, so nothing extra to update |
-| `index.html` | Home page: calendar sort, tag filters with counts (computed in the browser) |
-| `style.css` | Shared styles, light and dark theme |
-| `site.js` | Shared script: back-to-top button (with a reading-progress ring on reading pages). Every page must include `<script src="site.js" defer></script>` before `</body>`; a workflow adds it automatically if missing |
-| `feed.xml`, `feed.xsl` | Internal feed of all readings. It is no longer advertised on the site, but the Telegram and e-mail notifications and the home page read it, so it must keep getting a new item for every reading |
-| `abone.html` | E-mail subscription page; the form posts to the Brevo form set in its `data-brevo` attribute |
-| `.github/workflows/email.yml` | When `feed.xml` gets a new item, sends it to the Brevo subscriber list (`email-notified.json` tracks what was sent). Needs the secrets `BREVO_API_KEY`, `BREVO_LIST_ID`, `BREVO_SENDER_EMAIL`; skips quietly if they are missing |
+| `index.html` | Home page: a sidebar (site name with a rising sun, short description, "Abone ol" box with Telegram and e-mail, archive link, topic filters, signature) and a timeline of readings, newest first, with today's reading as a large card. Sorting, filters and counts are computed in the browser from the reading list in this file |
+| `arsiv.html` | Archive: every reading grouped by year and month, with topic, year and month drop-down filters (opens on the latest month). Reads the list from `index.html`, so nothing extra to update |
+| `abone.html` | E-mail subscription page. The form posts to the Brevo form set in its `data-brevo` attribute (double opt-in) |
+| `*.html` (others) | One self-contained page per reading |
+
+### Shared files
+
+| File | What it does |
+| --- | --- |
+| `style.css` | All styles: light theme with a dawn palette, dark theme, phone layout |
+| `site.js` | Adds the shared parts to every page: the rising sun in the top band of reading pages, the back-to-top button (with a reading-progress ring on reading pages), the share menu at the end of readings (WhatsApp, X, LinkedIn, Telegram, copy link, and the phone's own share sheet), the "Ana sayfaya dön" card and the signature line. Every page must include `<script src="site.js" defer></script>` before `</body>`; the `site-js` workflow adds it if missing |
+| `feed.xml`, `feed.xsl` | Internal feed of all readings. It is not advertised on the site, but the Telegram and e-mail notifications and the home page's "today" summary read it, so every new reading needs a new item here |
 | `images.json` | Photo manifest: URL, author, source, license |
-| `.github/workflows/fetch-images.yml` | Downloads the photos listed in `images.json` into `images/` |
-| `.github/workflows/notify.yml` | When `feed.xml` gets a new item, posts it to the Telegram channel (`notified.json` tracks what was sent) |
+| `images/share/` | Logos used on the share buttons, supplied by the site owner. They are trademarks of their respective companies and are only used to link to sharing on those services |
+| `templates/email.html` | Layout of the daily e-mail to subscribers |
+| `announce/` | One-off announcements for the Telegram channel (`sent.json` tracks what was sent) |
+| `substack/` | Images prepared for an earlier Substack cross-post; not linked from the site |
+
+Stylesheet and script links carry a `?v=` version so browsers pick up changes right away; bump it when `style.css` or `site.js` changes.
+
+### Automations (GitHub Actions)
+
+| Workflow | Trigger | What it does |
+| --- | --- | --- |
+| `notify.yml` | `feed.xml` changes | Posts each new reading to the Telegram channel (`notified.json` tracks what was sent) |
+| `email.yml` | `feed.xml` changes | Sends each new reading to the Brevo subscriber list (`email-notified.json` tracks what was sent). Needs the secrets `BREVO_API_KEY`, `BREVO_LIST_ID`, `BREVO_SENDER_EMAIL` (optional `BREVO_SENDER_NAME`); skips quietly if they are missing. Run it by hand with "check" ticked to verify the setup without sending anything |
+| `announce.yml` | a new file in `announce/` | Sends that announcement to the Telegram channel once |
+| `site-js.yml` | any page changes | Adds the `site.js` line to pages that are missing it |
+| `fetch-images.yml` | `images.json` changes | Downloads the photos listed in `images.json` into `images/` |
 
 Read counts use [GoatCounter](https://www.goatcounter.com/) (privacy-friendly, no cookies). The "Beğendim" (like) button is counted through GoatCounter events.
 
