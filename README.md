@@ -68,7 +68,7 @@ Stylesheet and script links carry a `?v=` version so browsers pick up changes ri
 | `notify.yml` | `feed.xml` changes | Posts each new reading to the Telegram channel (`notified.json` tracks what was sent) |
 | `email.yml` | `feed.xml` changes | Sends each new reading to the Brevo subscriber list (`email-notified.json` tracks what was sent). Needs the secrets `BREVO_API_KEY`, `BREVO_LIST_ID`, `BREVO_SENDER_EMAIL` (optional `BREVO_SENDER_NAME`); skips quietly if they are missing. Run it by hand with "check" ticked to verify the setup without sending anything |
 | `announce.yml` | a new file in `announce/` | Sends that announcement to the Telegram channel once |
-| `site-js.yml` | any page changes | Adds the `site.js` line to pages that are missing it, and refreshes each page's link-preview tags (`scripts/ensure_og.py`: title, summary and photo of a reading, or the site card) |
+| `site-js.yml` | any page changes | Adds the `site.js` line and the GoatCounter counter line to pages that are missing them, and refreshes each page's link-preview tags (`scripts/ensure_og.py`: title, summary and photo of a reading, or the site card) |
 | `og-image.yml` | `templates/og-card.html` changes | Renders the site's link-preview card `images/og.png` (1200×630) with the real web fonts |
 | `fetch-images.yml` | `images.json` changes | Downloads the photos listed in `images.json` into `images/` |
 
