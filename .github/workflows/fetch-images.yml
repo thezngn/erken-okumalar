@@ -35,7 +35,7 @@ jobs:
             exit 0
           fi
           git commit -m "Fotoğrafları indir"
-          git push
+          ok=0; for i in 1 2 3 4 5; do if git pull --rebase -q && git push; then ok=1; break; fi; echo "çakışma, yeniden deneniyor ($i)"; sleep $((i*4)); done; [ $ok = 1 ]
 
       - name: Pages yeniden derlensin
         env:

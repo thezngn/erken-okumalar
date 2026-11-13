@@ -30,7 +30,7 @@ jobs:
           git add feed.xml
           git diff --cached --quiet && exit 0
           git commit -m "13 Kasım okuması (akış, zamanlı)"
-          git pull --rebase -q && git push
+          ok=0; for i in 1 2 3 4 5; do if git pull --rebase -q && git push; then ok=1; break; fi; echo "çakışma, yeniden deneniyor ($i)"; sleep $((i*4)); done; [ $ok = 1 ]
           # GITHUB_TOKEN ile yapılan push başka iş akışını tetiklemez, bu yüzden elle çağırıyoruz
           gh workflow run notify.yml
           gh workflow run email.yml -f check=false
