@@ -3,6 +3,8 @@
 Bu depo tek gerçek kaynaktır. Hangi oturum (sohbet sekmesi, bulut görevi) çalışırsa çalışsın önce bu dosyayı, sonra yayin/hafta-plani.md dosyasını oku.
 
 ## Roller
+Kural: okuma yazıları yalnızca içerik oturumunda yazılır. Altyapı oturumu yazı yazmaz, konu seçmez, kuyruğa yazı eklemez; yazı sorunu görürse içerik oturumuna iletilmesi için Emrah'a söyler.
+
 - İçerik oturumu: yazıları araştırır, yazar, yayin/ altına koyar, yayin/kuyruk.json'a ekler.
 - Altyapı oturumu ("Erken okumalar sayfası tasarımı" sohbeti, gh erişimi var): tasarım, style.css, iş akışları (notify, email, fetch-images, yayin-kuyrugu), GitHub Actions kontrolü.
 - Bulut görevleri: her sabah 07:45'te yayin-kuyrugu.yml iş akışını başlatır; Pazar 10:17'de haftalık konu sorusu gelir.
