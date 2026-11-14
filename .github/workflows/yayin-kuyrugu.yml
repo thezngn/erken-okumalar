@@ -1,0 +1,42 @@
+name: Yayın kuyruğu
+
+# Zamanı gelmiş yazıları yayınlar. Bilgisayar ya da oturum gerekmez.
+# Her gün 07:45 (İstanbul) için 04:45 UTC, ardından GitHub gecikmelerine karşı sık aralıklı yedek çalıştırmalar.
+on:
+  schedule:
+    - cron: "45 4 * * *"
+    - cron: "55 4 * * *"
+    - cron: "10,25,40,55 5 * * *"
+    - cron: "15,45 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: yayin-kuyrugu
+  cancel-in-progress: false
+
+jobs:
+  yayin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Zamanı gelenleri yayınla
+        id: yay
+        run: |
+          out=$(python3 scripts/yayin_kuyrugu.py)
+          echo "yayinlanan=$out" >> "$GITHUB_OUTPUT"
+      - name: Kaydet ve bildirimleri başlat
+        if: steps.yay.outputs.yayinlanan != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Zamanlı yayın: ${{ steps.yay.outputs.yayinlanan }}"
+          for i in 1 2 3 4; do git pull --rebase -q && git push && break || sleep 5; done
+          gh workflow run notify.yml
+          gh workflow run email.yml -f check=false
