@@ -1,7 +1,7 @@
 name: Yayın kuyruğu
 
 # Zamanı gelmiş yazıları yayınlar. Bilgisayar ya da oturum gerekmez.
-# Asıl tetikleyici: her sabah 07:46 (İstanbul) Claude'un zamanlanmış görevi bu iş akışını
+# Asıl tetikleyici: her sabah 07:45 (İstanbul) Claude'un zamanlanmış görevi bu iş akışını
 # workflow_dispatch ile başlatır. GitHub'ın kendi zamanlayıcısı bu depoda saatlerce gecikti ya da
 # hiç çalışmadı, o yüzden aşağıdaki schedule satırları sadece yedek. Geç gelseler de zararsızdır:
 # betik zamanı gelmemiş ya da zaten yayında olan yazıya dokunmaz.
