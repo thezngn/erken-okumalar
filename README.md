@@ -65,6 +65,7 @@ Stylesheet and script links carry a `?v=` version so browsers pick up changes ri
 
 | Workflow | Trigger | What it does |
 | --- | --- | --- |
+| `yayin-kuyrugu.yml` | every morning 07:46 Istanbul, started by a Claude scheduled task (`workflow_dispatch`); GitHub `schedule` lines are only a backup | Publishes readings from `yayin/kuyruk.json` whose time has come (page, home card, feed item), then starts the Telegram and e-mail workflows. Safe to run any number of times. GitHub’s own cron proved unreliable for this repo (hours late or skipped), so it is not the primary trigger |
 | `notify.yml` | `feed.xml` changes | Posts each new reading to the Telegram channel (`notified.json` tracks what was sent) |
 | `email.yml` | `feed.xml` changes | Sends each new reading to the Brevo subscriber list (`email-notified.json` tracks what was sent). Needs the secrets `BREVO_API_KEY`, `BREVO_LIST_ID`, `BREVO_SENDER_EMAIL` (optional `BREVO_SENDER_NAME`); skips quietly if they are missing. Run it by hand with "check" ticked to verify the setup without sending anything |
 | `announce.yml` | a new file in `announce/` | Sends that announcement to the Telegram channel once |

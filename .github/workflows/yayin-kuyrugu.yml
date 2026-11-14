@@ -1,13 +1,17 @@
 name: Yayın kuyruğu
 
 # Zamanı gelmiş yazıları yayınlar. Bilgisayar ya da oturum gerekmez.
-# Her gün 07:45 (İstanbul) için 04:45 UTC, ardından GitHub gecikmelerine karşı sık aralıklı yedek çalıştırmalar.
+# Asıl tetikleyici: her sabah 07:46 (İstanbul) Claude'un zamanlanmış görevi bu iş akışını
+# workflow_dispatch ile başlatır. GitHub'ın kendi zamanlayıcısı bu depoda saatlerce gecikti ya da
+# hiç çalışmadı, o yüzden aşağıdaki schedule satırları sadece yedek. Geç gelseler de zararsızdır:
+# betik zamanı gelmemiş ya da zaten yayında olan yazıya dokunmaz.
+# Dakikalar saat başından uzak seçildi (GitHub saat başlarında daha çok geciktiriyor).
 on:
   schedule:
-    - cron: "45 4 * * *"
-    - cron: "55 4 * * *"
-    - cron: "10,25,40,55 5 * * *"
-    - cron: "15,45 6 * * *"
+    - cron: "47 4 * * *"
+    - cron: "13,37 5 * * *"
+    - cron: "17,43 6 * * *"
+    - cron: "23 7,8,9,11,14 * * *"
   workflow_dispatch:
 
 permissions:
@@ -37,6 +41,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "Zamanlı yayın: ${{ steps.yay.outputs.yayinlanan }}"
-          for i in 1 2 3 4; do git pull --rebase -q && git push && break || sleep 5; done
+          ok=0; for i in 1 2 3 4 5; do if git pull --rebase -q && git push; then ok=1; break; fi; sleep $((i*4)); done; [ $ok = 1 ]
           gh workflow run notify.yml
           gh workflow run email.yml -f check=false
