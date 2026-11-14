@@ -19,4 +19,4 @@ Bu depo tek gerçek kaynaktır. Hangi oturum (sohbet sekmesi, bulut görevi) ça
 - Kuyruk betiği idempotent: akışta olan slug'a dokunmaz.
 
 ## Açık konular
-- GitHub'ın cron (schedule) tetikleyicisinin bu depoda çalışıp çalışmadığı doğrulanmadı. Bulut görevi asıl tetikleyici, cron yedek.
+- GitHub'ın zamanlayıcısı (schedule) denendi, güvenilir değil: 13 Kasım işi 8 saat geç geldi, 14 Kasım'daki zamanlı çalıştırmalar atlandı. Asıl tetikleyici 07:45 bulut görevi. Zamanlayıcı bir gün geç çalışsa da kuyruk betiği idempotent olduğu için zarar vermez.
