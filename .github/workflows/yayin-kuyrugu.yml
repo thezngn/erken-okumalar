@@ -32,6 +32,16 @@ jobs:
         run: |
           out=$(python3 scripts/yayin_kuyrugu.py)
           echo "yayinlanan=$out" >> "$GITHUB_OUTPUT"
+      # Bu iş akışının push'u site-js.yml'yi tetiklemez (GITHUB_TOKEN kuralı), bu yüzden
+      # sayaç (GoatCounter), site.js ve bağlantı önizleme etiketleri yayından önce burada eklenir.
+      - name: Sayaç, site.js ve önizleme etiketlerini tamamla
+        if: steps.yay.outputs.yayinlanan != ''
+        run: |
+          python3 scripts/ensure_site_js.py
+          python3 scripts/ensure_og.py
+          for s in ${{ steps.yay.outputs.yayinlanan }}; do
+            grep -q 'gc.zgo.at/count.js' "$s.html" || { echo "::error::$s.html sayaçsız kaldı"; exit 1; }
+          done
       - name: Kaydet ve bildirimleri başlat
         if: steps.yay.outputs.yayinlanan != ''
         env:
