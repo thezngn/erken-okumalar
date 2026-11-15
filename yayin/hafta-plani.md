@@ -27,3 +27,11 @@ Her gün 07:45 İstanbul (feed pubDate 04:45 UTC), 13 dakikalık Türkçe okuma 
 - Orijinal satır içi SVG infografikler (en az 2-3), Pexels/Unsplash lisanslı, insan (ünlü) içermeyen fotoğraf (images.json + fetch-images iş akışı).
 - Bölümler: veri notu, "Kaynaklar çelişiyor", "Bu yazının sınırları", kaynak listesi.
 - turkish-anti-ai-skill taraması: "Yani", "X değil, Y", em-dash, "aslında" vb. temizlenir.
+
+## Bu haftanın konuları (Emrah, 15 Kasım Pazar günü seçti)
+- Sal 17 Kas: Boltzmann Beyni Paradoksu (kuyrukta)
+- Çar 18 Kas: Almanya ekonomisi (kuyrukta)
+- Per 19 Kas: Maaş ve tuz (kuyrukta)
+- Cum 20 Kas: Porsche 911'in tarihi (Emrah'ın seçimi, tema uzaydı)
+- Cmt 21 Kas: Boylam sorunu ve deniz kronometresi
+- Paz 22 Kas: Veri merkezleri ve elektrik tüketimi

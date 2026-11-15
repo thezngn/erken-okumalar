@@ -37,5 +37,31 @@
   "date_card": "18 Kasım 2026",
   "pub": "2026-11-18T04:45:00Z",
   "rfc": "Wed, 18 Nov 2026 04:45:00 +0000"
+ },
+ {
+  "slug": "boltzmann-beyni",
+  "file": "yayin/boltzmann-beyni.html",
+  "title": "Boltzmann Beyni Paradoksu: Evren Seni Rastgele Üretmiş Olabilir mi?",
+  "desc": "Boltzmann’ın dalgalanma fikrinden Carroll’ın “bilişsel kararsızlık” argümanına: gözlemcilerin çoğu rastgele beyinlerse kozmoloji neden sorun yaşar?",
+  "tags": [
+   "Bilim",
+   "Felsefe"
+  ],
+  "date_card": "17 Kasım 2026",
+  "pub": "2026-11-17T04:45:00Z",
+  "rfc": "Tue, 17 Nov 2026 04:45:00 +0000"
+ },
+ {
+  "slug": "maas-ve-tuz",
+  "file": "yayin/maas-ve-tuz.html",
+  "title": "Maaşın Tuzu: Romalı Askerler Gerçekten Tuzla mı Ödeme Aldı?",
+  "desc": "“Salary” kelimesi tuzdan mı geliyor? Roma askerleri, Plinius’un metni, Livy’nin tuz vergisi ve Türkçedeki “maaş”ın Arapça kökeni, kaynaklarıyla.",
+  "tags": [
+   "Kelime Kökeni",
+   "Tarih"
+  ],
+  "date_card": "19 Kasım 2026",
+  "pub": "2026-11-19T04:45:00Z",
+  "rfc": "Thu, 19 Nov 2026 04:45:00 +0000"
  }
 ]
