@@ -133,9 +133,11 @@ function num(v){return parseInt(String(v).replace(/\D/g,''),10)||0}
 function get(p){return fetch(base+encodeURIComponent(p)+'.json').then(function(r){return r.ok?r.json():null}).then(function(d){return d&&d.count?num(d.count):null}).catch(function(){return null})}
 items.forEach(function(li){
  var f=li.querySelector('h3 a').getAttribute('href'),ps=[dir+f,dir+f.replace(/\.html$/,'')],i=0;
- (function next(){if(i>=ps.length)return;get(ps[i++]).then(function(n){
+ function show(n){var s=document.createElement('span');s.className='rd';s.textContent=Math.max(n,1)+' kez okundu';li.querySelector('.m').appendChild(s)}
+ /* GoatCounter sayıları 4 saate kadar önbellekte tutar; yeni yazı henüz görünmüyorsa en az 1 gösterilir */
+ (function next(){if(i>=ps.length){show(0);return}get(ps[i++]).then(function(n){
   if(n===null){next();return}
-  if(n>0){var s=document.createElement('span');s.className='rd';s.textContent=n+' kez okundu';li.querySelector('.m').appendChild(s)}
+  show(n);
  })})();
 });
 })();
