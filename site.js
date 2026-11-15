@@ -107,3 +107,26 @@
   var nat=w.querySelector('.native');
   if(nat)nat.onclick=function(){navigator.share({title:title,url:url}).catch(function(){})};
 })();
+
+/* Okunma sayacı: her okuma sayfasında kendiliğinden çalışır.
+   Sayfada sayaç satırı ya da GoatCounter betiği eksikse ekler. GoatCounter yeni yazının
+   ilk okumalarını birkaç saat geç işleyebildiği için sayı gelmezse en az bu okumayı (1) gösterir. */
+(function(){
+  if(document.body.classList.contains('home'))return;
+  var meta=document.querySelector('p.meta');if(!meta||!document.querySelector('.hero'))return;
+  if(!document.querySelector('script[src*="gc.zgo.at/count.js"]')){
+    var g=document.createElement('script');g.async=true;g.src='//gc.zgo.at/count.js';
+    g.setAttribute('data-goatcounter','https://thezngn.goatcounter.com/count');document.head.appendChild(g);
+  }
+  var r=document.getElementById('reads');
+  if(!r){r=document.createElement('span');r.id='reads';r.className='reads';meta.appendChild(r);}
+  var p=location.pathname,base='https://thezngn.goatcounter.com/counter/';
+  function get(x){return fetch(base+encodeURIComponent(x)+'.json').then(function(s){return s.ok?s.json():null}).then(function(d){return d?parseInt(String(d.count).replace(/\D/g,''),10)||0:0}).catch(function(){return 0});}
+  setTimeout(function(){
+    if(r.textContent.trim()&&!/HTTP|hata|sayaç/.test(r.textContent))return;
+    Promise.all([get(p),get(p.replace(/\.html$/,''))]).then(function(a){
+      if(r.textContent.trim()&&!/HTTP|hata|sayaç/.test(r.textContent))return;
+      r.textContent=Math.max(a[0],a[1],1)+' kez okundu';
+    });
+  },2500);
+})();
