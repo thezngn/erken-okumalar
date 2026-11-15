@@ -188,5 +188,25 @@
     "license": "Pexels License (ücretsiz kullanım; sayfada: Free)",
     "verified": "2026-11-14",
     "used_in": "almanya-ekonomisi"
+  },
+  {
+    "file": "samanyolu-gece-gokyuzu.jpg",
+    "url": "https://images.pexels.com/photos/433155/pexels-photo-433155.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://www.pexels.com/photo/milky-way-galaxy-433155/",
+    "author": "Pixabay",
+    "source": "Pexels",
+    "license": "Pexels License (ücretsiz kullanım; sayfada: Free)",
+    "verified": "2026-11-15",
+    "used_in": "boltzmann-beyni"
+  },
+  {
+    "file": "maras-tuz-havuzlari.jpg",
+    "url": "https://images.pexels.com/photos/38244569/pexels-photo-38244569.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://www.pexels.com/photo/aerial-view-of-salt-pans-in-maras-peru-38244569/",
+    "author": "Juan Carlos Quispe Pumayali",
+    "source": "Pexels",
+    "license": "Pexels License (ücretsiz kullanım; sayfada: Free)",
+    "verified": "2026-11-15",
+    "used_in": "maas-ve-tuz"
   }
 ]
