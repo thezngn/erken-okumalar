@@ -76,5 +76,31 @@
     "date_card": "20 Kasım 2026",
     "pub": "2026-11-20T17:50:00Z",
     "rfc": "Fri, 20 Nov 2026 17:50:00 +0000"
+  },
+  {
+    "slug": "boylam-ve-kronometre",
+    "file": "yayin/boylam-ve-kronometre.html",
+    "title": "Boylam Sorunu: Marangoz Harrison ve Denizde Doğru Saat Arayışı",
+    "desc": "Denizde doğu-batı konumunu bulmak neden saat gerektiriyordu? 1714 yasası, Harrison’ın H1-H4 saatleri, Maskelyne’in ay mesafesi yöntemi, kaynaklarıyla.",
+    "tags": [
+      "Tarih",
+      "Bilim ve Teknoloji"
+    ],
+    "date_card": "21 Kasım 2026",
+    "pub": "2026-11-21T04:45:00Z",
+    "rfc": "Sat, 21 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "veri-merkezleri-elektrik",
+    "file": "yayin/veri-merkezleri-elektrik.html",
+    "title": "Veri Merkezleri ve Elektrik: Yapay Zekâ Gerçekten Ne Kadar Enerji Harcıyor?",
+    "desc": "Veri merkezleri 2025’te 485 TWh çekti. IEA, 2030 için iki katını bekliyor. Rakamların nereden geldiği, nerede çeliştiği ve yerel şebekelerdeki gerilim, kaynaklarıyla.",
+    "tags": [
+      "Teknoloji",
+      "Enerji"
+    ],
+    "date_card": "22 Kasım 2026",
+    "pub": "2026-11-22T04:45:00Z",
+    "rfc": "Sun, 22 Nov 2026 04:45:00 +0000"
   }
 ]
