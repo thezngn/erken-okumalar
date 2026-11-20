@@ -208,5 +208,35 @@
     "license": "Pexels License (ücretsiz kullanım; sayfada: Free)",
     "verified": "2026-11-15",
     "used_in": "maas-ve-tuz"
+  },
+  {
+    "file": "porsche-911-on-cephe.jpg",
+    "url": "https://images.pexels.com/photos/6166025/pexels-photo-6166025.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://www.pexels.com/photo/black-and-silver-porsche-911-6166025/",
+    "author": "Khalid Satvilker",
+    "source": "Pexels",
+    "license": "Pexels License (ücretsiz kullanım; sayfada: Free)",
+    "verified": "2026-11-20",
+    "used_in": "porsche-911"
+  },
+  {
+    "file": "antika-pusula.jpg",
+    "url": "https://images.pexels.com/photos/6593988/pexels-photo-6593988.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://www.pexels.com/photo/vintage-compass-6593988/",
+    "author": "Jaiju Jacob",
+    "source": "Pexels",
+    "license": "Pexels License (ücretsiz kullanım; sayfada: Free)",
+    "verified": "2026-11-20",
+    "used_in": "boylam-ve-kronometre"
+  },
+  {
+    "file": "veri-merkezi-koridor.jpg",
+    "url": "https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://www.pexels.com/photo/server-racks-on-data-center-4508751/",
+    "author": "Brett Sayles",
+    "source": "Pexels",
+    "license": "Pexels License (ücretsiz kullanım; sayfada: Free)",
+    "verified": "2026-11-20",
+    "used_in": "veri-merkezleri-elektrik"
   }
 ]

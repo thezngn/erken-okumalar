@@ -1,67 +1,80 @@
 [
- {
-  "slug": "avrupa-adi",
-  "file": "yayin/avrupa-adi.html",
-  "title": "Avrupa Adı Nereden Geliyor? Bir Fenikeli Prenses, Bir Boğa ve Çözülmemiş Bir Soru",
-  "desc": "Europa miti, Herodot’un şüphesi, Yunanca ve Semitik köken tartışması ve bir tweet’in üç iddiası: “Kıtanın adı Semitik bir prensesten geliyor.”",
-  "tags": [
-   "Tarih",
-   "Kelime Kökeni"
-  ],
-  "date_card": "15 Kasım 2026",
-  "pub": "2026-11-15T04:45:00Z",
-  "rfc": "Sun, 15 Nov 2026 04:45:00 +0000"
- },
- {
-  "slug": "uyku-ve-ogrenme",
-  "file": "yayin/uyku-ve-ogrenme.html",
-  "title": "Uyku ve Öğrenme: Uyuyan Beyin Ne Yapıyor, Ne Kadarını Biliyoruz?",
-  "desc": "1924’ten bugüne uykunun hatırlamaya etkisi: unutma deneyleri, 36 saatlik uykusuzluk, şekerleme, duygusal anılar meta-analizi ve Why We Sleep eleştirisi.",
-  "tags": [
-   "Kişisel Gelişim",
-   "Psikoloji"
-  ],
-  "date_card": "16 Kasım 2026",
-  "pub": "2026-11-16T04:45:00Z",
-  "rfc": "Mon, 16 Nov 2026 04:45:00 +0000"
- },
- {
-  "slug": "almanya-ekonomisi",
-  "file": "yayin/almanya-ekonomisi.html",
-  "title": "Almanya Ekonomisi: Avrupa’nın Lokomotifi Neden Zorlanıyor, Borç Freni Neyi Değiştirdi?",
-  "desc": "Almanya’nın 2026 rakamları: iki küçülme yılından zayıf toparlanma, otomotivdeki kayıplar, borç freninin gevşemesi ve Türkiye’nin ihracat bağı.",
-  "tags": [
-   "Ekonomi",
-   "Siyasi Tarih"
-  ],
-  "date_card": "18 Kasım 2026",
-  "pub": "2026-11-18T04:45:00Z",
-  "rfc": "Wed, 18 Nov 2026 04:45:00 +0000"
- },
- {
-  "slug": "boltzmann-beyni",
-  "file": "yayin/boltzmann-beyni.html",
-  "title": "Boltzmann Beyni Paradoksu: Evren Seni Rastgele Üretmiş Olabilir mi?",
-  "desc": "Boltzmann’ın dalgalanma fikrinden Carroll’ın “bilişsel kararsızlık” argümanına: gözlemcilerin çoğu rastgele beyinlerse kozmoloji neden sorun yaşar?",
-  "tags": [
-   "Bilim",
-   "Felsefe"
-  ],
-  "date_card": "17 Kasım 2026",
-  "pub": "2026-11-17T04:45:00Z",
-  "rfc": "Tue, 17 Nov 2026 04:45:00 +0000"
- },
- {
-  "slug": "maas-ve-tuz",
-  "file": "yayin/maas-ve-tuz.html",
-  "title": "Maaşın Tuzu: Romalı Askerler Gerçekten Tuzla mı Ödeme Aldı?",
-  "desc": "“Salary” kelimesi tuzdan mı geliyor? Roma askerleri, Plinius’un metni, Livy’nin tuz vergisi ve Türkçedeki “maaş”ın Arapça kökeni, kaynaklarıyla.",
-  "tags": [
-   "Kelime Kökeni",
-   "Tarih"
-  ],
-  "date_card": "19 Kasım 2026",
-  "pub": "2026-11-19T04:45:00Z",
-  "rfc": "Thu, 19 Nov 2026 04:45:00 +0000"
- }
+  {
+    "slug": "avrupa-adi",
+    "file": "yayin/avrupa-adi.html",
+    "title": "Avrupa Adı Nereden Geliyor? Bir Fenikeli Prenses, Bir Boğa ve Çözülmemiş Bir Soru",
+    "desc": "Europa miti, Herodot’un şüphesi, Yunanca ve Semitik köken tartışması ve bir tweet’in üç iddiası: “Kıtanın adı Semitik bir prensesten geliyor.”",
+    "tags": [
+      "Tarih",
+      "Kelime Kökeni"
+    ],
+    "date_card": "15 Kasım 2026",
+    "pub": "2026-11-15T04:45:00Z",
+    "rfc": "Sun, 15 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "uyku-ve-ogrenme",
+    "file": "yayin/uyku-ve-ogrenme.html",
+    "title": "Uyku ve Öğrenme: Uyuyan Beyin Ne Yapıyor, Ne Kadarını Biliyoruz?",
+    "desc": "1924’ten bugüne uykunun hatırlamaya etkisi: unutma deneyleri, 36 saatlik uykusuzluk, şekerleme, duygusal anılar meta-analizi ve Why We Sleep eleştirisi.",
+    "tags": [
+      "Kişisel Gelişim",
+      "Psikoloji"
+    ],
+    "date_card": "16 Kasım 2026",
+    "pub": "2026-11-16T04:45:00Z",
+    "rfc": "Mon, 16 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "almanya-ekonomisi",
+    "file": "yayin/almanya-ekonomisi.html",
+    "title": "Almanya Ekonomisi: Avrupa’nın Lokomotifi Neden Zorlanıyor, Borç Freni Neyi Değiştirdi?",
+    "desc": "Almanya’nın 2026 rakamları: iki küçülme yılından zayıf toparlanma, otomotivdeki kayıplar, borç freninin gevşemesi ve Türkiye’nin ihracat bağı.",
+    "tags": [
+      "Ekonomi",
+      "Siyasi Tarih"
+    ],
+    "date_card": "18 Kasım 2026",
+    "pub": "2026-11-18T04:45:00Z",
+    "rfc": "Wed, 18 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "boltzmann-beyni",
+    "file": "yayin/boltzmann-beyni.html",
+    "title": "Boltzmann Beyni Paradoksu: Evren Seni Rastgele Üretmiş Olabilir mi?",
+    "desc": "Boltzmann’ın dalgalanma fikrinden Carroll’ın “bilişsel kararsızlık” argümanına: gözlemcilerin çoğu rastgele beyinlerse kozmoloji neden sorun yaşar?",
+    "tags": [
+      "Bilim",
+      "Felsefe"
+    ],
+    "date_card": "17 Kasım 2026",
+    "pub": "2026-11-17T04:45:00Z",
+    "rfc": "Tue, 17 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "maas-ve-tuz",
+    "file": "yayin/maas-ve-tuz.html",
+    "title": "Maaşın Tuzu: Romalı Askerler Gerçekten Tuzla mı Ödeme Aldı?",
+    "desc": "“Salary” kelimesi tuzdan mı geliyor? Roma askerleri, Plinius’un metni, Livy’nin tuz vergisi ve Türkçedeki “maaş”ın Arapça kökeni, kaynaklarıyla.",
+    "tags": [
+      "Kelime Kökeni",
+      "Tarih"
+    ],
+    "date_card": "19 Kasım 2026",
+    "pub": "2026-11-19T04:45:00Z",
+    "rfc": "Thu, 19 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "porsche-911",
+    "file": "yayin/porsche-911.html",
+    "title": "Porsche 911: “901”den Hibrite Altmış Yıllık Yol",
+    "desc": "Porsche 911 neden önce 901’di? Peugeot itirazı, boxer motor, hava soğutmadan su soğutmaya geçiş, nesil kodları ve 2024’ün hibriti, kaynaklarıyla.",
+    "tags": [
+      "Otomobil",
+      "Tasarım ve Mühendislik"
+    ],
+    "date_card": "20 Kasım 2026",
+    "pub": "2026-11-20T17:50:00Z",
+    "rfc": "Fri, 20 Nov 2026 17:50:00 +0000"
+  }
 ]
