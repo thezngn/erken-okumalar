@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boylam Sorunu: Marangoz Harrison ve Denizde Doğru Saat Arayışı · Claude ile Erken Okumalar</title>
+<meta name="description" content="Denizde doğu-batı konumunu bulmak neden saat gerektiriyordu? 1714 yasası, Harrison’ın H1-H4 saatleri, Maskelyne’in ay mesafesi yöntemi, kaynaklarıyla.">
+<link rel="stylesheet" href="style.css?v=20261115a">
+<script data-goatcounter="https://thezngn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<!-- og -->
+<meta property="og:site_name" content="Claude ile Erken Okumalar">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Boylam Sorunu: Marangoz Harrison ve Denizde Doğru Saat Arayışı">
+<meta property="og:description" content="Denizde doğu-batı konumunu bulmak neden saat gerektiriyordu? 1714 yasası, Harrison’ın H1-H4 saatleri, Maskelyne’in ay mesafesi yöntemi, kaynaklarıyla.">
+<meta property="og:url" content="https://thezngn.github.io/erken-okumalar/boylam-ve-kronometre.html">
+<meta property="og:image" content="https://thezngn.github.io/erken-okumalar/images/antika-pusula.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- /og -->
+</head>
+<body>
+<main>
+
+<div class="hero" aria-hidden="true">
+<svg viewBox="0 0 680 120" preserveAspectRatio="xMidYMid slice">
+<rect class="h3" width="680" height="120"/>
+<path class="h1" d="M0 80 C90 40 170 110 270 70 S450 30 540 70 S640 90 680 60 L680 120 L0 120Z"/>
+<path class="h2" d="M0 100 C110 70 200 120 310 95 S500 70 600 100 S660 110 680 95 L680 120 L0 120Z"/>
+<circle class="h2" cx="590" cy="34" r="22"/>
+<circle class="h1" cx="545" cy="48" r="9"/>
+</svg>
+</div>
+
+<p class="meta"><a href="index.html">← Claude ile Erken Okumalar</a><span>21 Kasım 2026</span><span class="chip c1">Tarih</span><span class="chip c2">Bilim ve Teknoloji</span><span class="chip c3">13 dk okuma</span><span id="reads" class="reads"></span></p>
+<h1>Boylam Sorunu: Marangoz Harrison ve Denizde Doğru Saat Arayışı</h1>
+<p class="lead">Okyanusun ortasında bir geminin nerede olduğunu bulmak, 18. yüzyılın başında Britanya’nın en pahalı bilimsel sorunlarından biriydi. Kuzey-güney konumunu, yani enlemi, bir denizci güneşin öğle yüksekliğinden çıkarabiliyordu. Doğu-batı konumu, yani boylam, ise başka bir şey gerektiriyordu: tam bir saat. Parlamento 1714’te bu sorunu çözene büyük para ödülü vaat etti ve ödülü kazanan kişi bir astronom ya da bir matematikçi olmadı. Kendi kendini yetiştirmiş bir marangoz çıktı. Bu yazı o hikâyeyi iki ana kaynakla anlatıyor: Greenwich’teki Kraliyet Müzeleri’nin (RMG) sayfası ve St Andrews Üniversitesi’nin matematik tarihi arşivi. Hikâyenin bildiğimiz hâlinden farklı çıkan yerlerini sonuna bıraktım.</p>
+
+<figure class="photo">
+<img src="images/antika-pusula.jpg" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/6593988/pexels-photo-6593988.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200'" alt="Eski tip pirinç denizci pusulasının yakın çekimi" width="1200" height="800" loading="lazy" referrerpolicy="no-referrer">
+<figcaption>Temsili görsel: eski tip bir pirinç pusula. Pusula yön gösterir, boylamı değil, bu yazının asıl konusu zamandır. Fotoğrafta kişi yok. Fotoğraf: <a href="https://www.pexels.com/photo/vintage-compass-6593988/">Jaiju Jacob</a> / Pexels</figcaption>
+</figure>
+
+<div class="stats">
+<div><b>2.000+</b>1707’de Scilly Adaları’nda dört geminin karaya oturmasında ölen denizci</div>
+<div><b>£20.000</b>1714 yasasındaki en yüksek ödül</div>
+<div><b>5 sn</b>H4’ün Jamaika yolculuğunda kaybettiği süre (MacTutor)</div>
+</div>
+
+<h2>Önce kavramlar</h2>
+<p>Yazıda geçen terimleri baştan toparlayayım.</p>
+<ul>
+<li><b>Enlem:</b> bir yerin ekvatora göre kuzey ya da güneyde olması. Güneşin öğle yüksekliğinden ya da kutup yıldızından ölçülebilir.</li>
+<li><b>Boylam:</b> bir yerin başlangıç meridyenine (bugün Greenwich’ten geçen hat) göre doğuda ya da batıda olması. Derece cinsinden ölçülür.</li>
+<li><b>Kronometre:</b> denizde ve sıcaklık değişiminde bile çok az sapan, çok hassas taşınabilir saat. “Chronos” Yunancada “zaman” demek.</li>
+<li><b>Deniz mili (nautical mile) ve coğrafi mil:</b> denizcilikte kullanılan uzunluk birimi. Kaynaklar bir derecelik boylamı “altmış coğrafi mil” olarak veriyor, yani kabaca bir dakikalık yay bir mil. Bu eşitlik ekvatorda geçerli.</li>
+<li><b>Ay mesafesi yöntemi (lunar distance):</b> Ay’ın belirli yıldızlara olan açısını ölçüp bunu hazır tablolarla karşılaştırarak saati bulma yöntemi.</li>
+<li><b>Board of Longitude (Boylam Kurulu):</b> ödül başvurularını değerlendirmek için kurulan resmî heyet.</li>
+</ul>
+
+<h2>Neden saat gerekiyor?</h2>
+<p>Dünya 24 saatte bir kez döndüğü için 360 dereceyi 24’e böldüğümde saatte 15 derece çıkıyor. Bu hesap benim, RMG sayfasında bu ilişki açıkça anlatılmıyor. Mantığı şu: gemide öğle vakti güneş tam tepeye geldiğinde elinizde başka bir yerin, mesela Londra’nın, saatini gösteren bir saat varsa ve o saat öğleden iki saat sonrasını gösteriyorsa, Londra’nın iki saat doğusundan geçmişsiniz demektir. İki saat, yani otuz derece. Demek ki boylamı bulmak için Londra saatini sağlam biçimde taşımak yeter.</p>
+<p>18. yüzyılın başındaki sarkaçlı saatler karada çok iyi çalışıyordu, ama sarkaç gemide yalpada işe yaramıyordu. Sıcaklık, nem ve gemi sarsıntısı yağı, yayları, metalin boyunu değiştiriyordu. Bu bir mühendislik sorunuydu: dalgalı denizde, aylarca, günde birkaç saniyeden fazla sapmayan bir saat gerekiyordu.</p>
+
+<div class="flow">
+<div class="k"><b>1. Yerel öğle</b>Güneş tepeye geldi, gemideki saat yerel öğleyi gösteriyor</div>
+<div class="c"><b>2. Başlangıç saati</b>Taşınan saat hâlâ Londra saatini gösteriyor</div>
+<div class="g"><b>3. Fark = boylam</b>Saat farkı × 15 = derece farkı (benim hesabım)</div>
+</div>
+
+<h2>Ödül yasası ve gerekçe</h2>
+<p>Sorunu yasaya taşıyan olay, MacTutor’un arşiv sayfasına göre 1707’de Scilly Adaları’nda yaşandı: Britanya’ya dönen dört savaş gemisi adaların kayalarına oturdu ve iki binden fazla denizci öldü. Sayfa, komutanın adını yazmıyor. Çarpışmanın doğrudan boylam hatasından kaynaklandığını mı yoksa başka bir nedenle mi olduğunu da yazmıyor. Yalnızca olayı, boylam sorununa verilen tepkinin sahnesi olarak anıyor.</p>
+<p>Yasa 16 Haziran 1714’te çıktı. Üç kademe ödül öngörüyordu:</p>
+<ul class="tl">
+<li><span class="y">£10.000</span>Boylamı bir derece, yani altmış coğrafi mil içinde bulan yöntem için.</li>
+<li><span class="y">£15.000</span>Bu mesafenin üçte ikisi için (yaklaşık kırk mil).</li>
+<li><span class="y">£20.000</span>Bu mesafenin yarısı için (otuz mil, yani yarım derece).</li>
+</ul>
+<p>Bu paranın ne anlama geldiğini bugünkü para cinsinden söyleyemiyorum, çünkü kaynaklarımda enflasyon karşılığı yok.</p>
+
+<figure class="chart">
+<figcaption>1714 yasasındaki ödül kademeleri (bin sterlin)</figcaption>
+<svg viewBox="0 0 600 160" role="img" aria-label="1 derece, 60 mil: 10 bin sterlin; 2/3 derece, 40 mil: 15 bin sterlin; yarım derece, 30 mil: 20 bin sterlin">
+<text x="0" y="34">1° (60 mil)</text>
+<rect class="bg" x="130" y="18" width="190" height="24" rx="4"/>
+<text class="v" x="326" y="34">10.000</text>
+<text x="0" y="80">⅔° (40 mil)</text>
+<rect class="bg" x="130" y="64" width="285" height="24" rx="4"/>
+<text class="v" x="421" y="80">15.000</text>
+<text x="0" y="126">½° (30 mil)</text>
+<rect class="bt" x="130" y="110" width="380" height="24" rx="4"/>
+<text class="v" x="516" y="126">20.000</text>
+</svg>
+<small>Kaynak: MacTutor (St Andrews), İngiliz yasası 1714. 1.000 sterlin = 19 birim. Ödül, doğruluk arttıkça yükseliyor.</small>
+</figure>
+
+<h2>Marangoz Harrison</h2>
+<p>RMG sayfasına göre John Harrison kendi kendini yetiştirmiş bir marangozdu ve 1720’lerin ortasında yüksek hassasiyetli uzun kasalı saatler (longcase clock) yapıyordu. Sonra taşınabilir ve denizde çalışabilecek bir saat yapmaya yöneldi. Bu çalışmanın ilk ürünü H1’di.</p>
+<p>H1’i 1736’da Lizbon’a giden bir yolculukta, Centurion gemisiyle gidip Orford gemisiyle dönerek denedi. Dönüşte saati, görünen burnun Lizard olduğunu, geminin sandığı gibi Start olmadığını kanıtlamasını sağladı. Burun yanlış tanınsaydı gemi tehlikeye girebilirdi. 1737’de Boylam Komiserleri Harrison’a 500 sterlin ödenmesinde anlaştılar ve bunun 250’si baştan verildi.</p>
+<p>H2 iki yıl içinde tamamlandı ama hiç denize çıkmadı. Harrison onda temel bir kusur buldu. H3’ü 1740’ta başladı ve üzerinde 19 yıl çalıştı, istenen doğruluğa ulaşmak için çok değişiklik yaptı. H4 ise tamamen farklı çıktı. John Jefferys’in yaptığı bir cep saatinin yeni türdeki balansı etrafında kuruldu. Saniyede beş kez tık atıyordu.</p>
+
+<h2>İki deneme</h2>
+<p>H4 iki denemeden geçti. İlkinde 1761’de Harrison’ın oğlu William saati Jamaika’ya götürdü. RMG sayfasına göre William bu yolculukta saati kullanıp Madeira adasına beklenenden erken varılacağını doğru tahmin etti. MacTutor ise aynı yolculukta H4’ün tüm sefer boyunca beş saniye kaybettiğini yazıyor ve bunun ödül koşullarını karşıladığını söylüyor.</p>
+<p>İkinci deneme, 28 Mart 1764’te Portsmouth’tan Barbados’a giden HMS Tartar gemisinde yapıldı. MacTutor’a göre H4 beş ayda 54 saniye kaybetti. Harrison’ın önceden belirlediği düzeltmeler uygulandığında hata 15 saniyeye düşüyordu. RMG’ye göre bu denemede H4 aynı zamanda ay mesafesi yöntemi ve Jüpiter’in uyduları üzerinden yapılan ölçümlerle karşılaştırıldı ve 1714 yasasının katı sınırlarında kaldı.</p>
+<p>Bu rakamların neye karşılık geldiğini hesapladım. Dört dakikalık zaman farkı bir derece boylam eder (360 derece bölü 24 saat, saatte 15 derece, dolayısıyla derece başına 4 dakika). Yarım derece bu yüzden iki dakika, yani 120 saniye. En yüksek ödül için gereken hata bu sınırın altında olmalıydı. H4’ün Barbados’taki 54 saniyelik hatası bu sınırın altında kalıyor. Hesabın bu kısmı benim, kaynaklar “120 saniye” demiyor.</p>
+
+<figure class="chart">
+<figcaption>H4’ün hatası ve yasanın en sıkı sınırı (saniye)</figcaption>
+<svg viewBox="0 0 600 230" role="img" aria-label="Sınır: 120 saniye; Barbados 1764, düzeltmesiz: 54 saniye; Barbados 1764, düzeltmeyle: 15 saniye; Jamaika 1761: 5 saniye">
+<text x="0" y="34">£20.000 sınırı</text>
+<rect class="bg" x="190" y="18" width="360" height="24" rx="4"/>
+<text class="v" x="556" y="34">120</text>
+<text x="0" y="80">Barbados, ham</text>
+<rect class="bc" x="190" y="64" width="162" height="24" rx="4"/>
+<text class="v" x="358" y="80">54</text>
+<text x="0" y="126">Barbados, düzeltmeli</text>
+<rect class="bt" x="190" y="110" width="45" height="24" rx="4"/>
+<text class="v" x="241" y="126">15</text>
+<text x="0" y="172">Jamaika (1761)</text>
+<rect class="bt" x="190" y="156" width="15" height="24" rx="4"/>
+<text class="v" x="211" y="172">5</text>
+</svg>
+<small>Kaynak: MacTutor (deneme sonuçları). 120 saniyelik sınır, yarım derece ÷ (15 derece/saat) hesabından benim çıkardığım değer. 1 saniye = 3 birim. İki denemenin koşulları ve süreleri aynı değil.</small>
+</figure>
+
+<h2>Neden ödül hemen verilmedi?</h2>
+<p>Kâğıt üzerinde Harrison kazanmıştı. Ama Boylam Kurulu ödemeyi isteksiz yaptı. RMG’ye göre Kurul, H4’ü gösterdiğinde 10.000 sterlin önerdi, diğer yarısını da başka saatçilerin benzer saatleri yapabileceğini göstermesine bağladı. Bu öneri 10 Mayıs 1765 tarihli bir yasaya dönüştü. Harrison kuralların kendisine karşı değiştirildiğini düşünüyordu.</p>
+<p>MacTutor ayrıca Kurul ile Kraliyet Cemiyeti’nin 20.000 sterlini ödemeye isteksiz olduğunu, Harrison’ın parayı kral III. George’a başvurduktan sonra aldığını yazıyor. RMG ise onun sonunda “cömert bir tazminat” aldığını ama hak ettiğini düşündüğü her şeyi alamadığını söylüyor. İki cümle birbirini tamamlıyor ama aynı olay hakkında farklı düzeyde ayrıntı veriyor.</p>
+<p>Nevil Maskelyne, o dönemin Astronomer Royal’ı (Kraliyet Astronomu), olayların merkezinde yer alıyor. 1761’de Prince Henry gemisiyle St Helena adasına gitti ve ay mesafesi yöntemini ve Tobias Mayer’in tablolarını Kurul adına denedi. MacTutor’a göre boylamın “her zaman bir derece içinde bulunabileceğini” savundu, bu Manş enleminde yaklaşık 40 coğrafi mile denk geliyor. 1764 Barbados denemesinde William Harrison, Maskelyne’nin tarafsız olmadığından şikâyet etti. Maskelyne hasta olduğu için gözlemlerin başkasınca yapılmasını istedi. 1766’da ise, RMG’ye göre, H4’ü Kraliyet Gözlemevi’nde on ay boyunca test etti ve saat kötü performans gösterdi. Harrison ile anlaşmazlık yeniden alevlendi.</p>
+
+<h2>Rakip yöntem: gökyüzü saati</h2>
+<p>Ay mesafesi yöntemi, saati taşımak yerine gökyüzünü bir saat gibi kullanmaya dayanıyordu. Bu bölümü anlatışım benim genel bilgim ve kaynakla doğrulanmadı: Ay, yıldızların arasında yavaş yavaş kayar. Birinin Ay ile belirli bir yıldız arasındaki açıyı ölçüp bunu önceden hesaplanmış tablolarla karşılaştırması, Greenwich’te şu anda saatin kaç olduğunu verir. Doğruluğu tablolara bağlıdır.</p>
+<p>Kaynaklarımdaki parça şu: Alman astronom Tobias Mayer 1756’da ay tablolarını Boylam Kurulu’na gönderdi, savaş koşulları nedeniyle uygun deneme yapılamadı, 1762’de öldü ve dul eşi Kurul’dan 3.000 sterlin aldı. Astronom James Bradley, Harrison’ın “lanet saati” olmasa ödülün Mayer ile kendisi arasında bölüşüleceğini söylemiş. Alıntıyı MacTutor aktarıyor, ben orijinalini görmedim. Bu söz, yarışın yalnızca bilim içinde değil, adlar ve çıkarlar arasında olduğunu gösteriyor.</p>
+
+<figure class="chart">
+<figcaption>Zaman çizelgesi: 1707-1766</figcaption>
+<svg viewBox="0 0 600 224" role="img" aria-label="1707 Scilly; 1714 yasa; 1736 H1 Lizbon; 1761 H4 Jamaika; 1764 Barbados; 1765 yeni yasa; 1766 Maskelyne testi">
+<line class="ax" x1="40" y1="150" x2="580" y2="150"/>
+<line class="ax" x1="96" y1="104" x2="96" y2="150"/><circle class="dt" cx="96" cy="150" r="5"/>
+<text x="96" y="98" text-anchor="start">1707 Scilly</text>
+<line class="ax" x1="152" y1="64" x2="152" y2="150"/><circle class="dt" cx="152" cy="150" r="5"/>
+<text x="152" y="58" text-anchor="start">1714 Yasa</text>
+<line class="ax" x1="328" y1="104" x2="328" y2="150"/><circle class="dt" cx="328" cy="150" r="5"/>
+<text x="328" y="98" text-anchor="middle">1736 H1, Lizbon</text>
+<line class="ax" x1="528" y1="64" x2="528" y2="150"/><circle class="dt" cx="528" cy="150" r="5"/>
+<text x="532" y="58" text-anchor="end">1761 H4, Jamaika</text>
+<line class="ax" x1="552" y1="104" x2="552" y2="150"/><circle class="dt" cx="552" cy="150" r="5"/>
+<text x="556" y="98" text-anchor="end">1764 Barbados</text>
+<line class="ax" x1="560" y1="150" x2="560" y2="184"/><circle class="dt" cx="560" cy="150" r="5"/>
+<text x="564" y="198" text-anchor="end">1765 Yeni yasa</text>
+<line class="ax" x1="568" y1="150" x2="568" y2="206"/><circle class="dt" cx="568" cy="150" r="5"/>
+<text x="572" y="220" text-anchor="end">1766 Maskelyne testi</text>
+</svg>
+<small>Kaynak: RMG ve MacTutor. Yıllar ölçekli yerleştirildi (1 yıl = 8 birim). 1764-1766 arası olaylar birbirine yakın olduğu için etiketler farklı yüksekliklerde.</small>
+</figure>
+
+<h2>Saatlerin sonu: ucuzlama</h2>
+<p>RMG’ye göre erken deniz kronometreleri pahalıydı ve bu yüzden yayılmaları yavaş oldu. Sonraki saatçiler tasarımı basitleştirdi ve ucuzlattı, 1800’lerin başında kronometre yaygın biçimde kullanılır hâle geldi. Kâğıt üzerinde çözüm 1760’larda vardı ama deniz taşımacılığında rutin hâline gelmesi yaklaşık kırk yıl daha aldı. Bu aralık benim kaynaklardan çıkardığım yaklaşık bir sayı, sayfalarda “kırk yıl” diye bir ifade yok.</p>
+<p>Harrison’ın saatlerinin dördü de hayatta. RMG’ye göre H2, H3 ve H4 Greenwich’teki Kraliyet Gözlemevi’nde sergileniyor, H1’in aslı ise koruma (konservasyon) çalışması altında. H1’in bir kopyası sergide.</p>
+
+<h2>Saniyeyi mile çevirmek</h2>
+<p>“54 saniye” ilk bakışta çok küçük bir rakam gibi duruyor ve gerçekten öyle. Neden öyle olduğunu görmek için hesabı mile çevirelim. Kaynaklara göre bir derece boylam altmış coğrafi mil. Bir derece dört dakika zaman demek, o hâlde bir dakika zaman on beş mil, bir saniye zaman çeyrek mil eder (yaklaşık 460 metre). Bu eşitlik yalnızca ekvatorda tutuyor, çünkü boylam çizgileri kutuplara yaklaştıkça birbirine yaklaşır ve derece başına mil azalır. Aşağıdaki sayılar bu yüzden “en fazla” anlamında okunmalı. Hesabın tamamı benim.</p>
+<ul class="tl">
+<li><span class="y">5 saniye (Jamaika, 1761)</span>En fazla 1,25 mil.</li>
+<li><span class="y">15 saniye (Barbados, düzeltmeli)</span>En fazla 3,75 mil.</li>
+<li><span class="y">54 saniye (Barbados, ham)</span>En fazla 13,5 mil.</li>
+<li><span class="y">120 saniye (£20.000 sınırı)</span>30 mil, yasanın kendi sınırı.</li>
+</ul>
+<p>En kötü ihtimalle bile H4’ün hatası, yasanın en sıkı koşulunun dörtte birinden biraz fazlasıydı. Bir denizci için on üç mil, kıyıya yaklaşırken görüş mesafesinin çok ötesinde bir mesafe. Ama Scilly’deki gibi bir kazayı önlemek için yetiyor. Bu yorum benim, kaynaklar böyle bir sonuç yazmıyor.</p>
+
+<h2>İki yolculuğun sorduğu farklı sorular</h2>
+<p>İlk iki sayfayı karşılaştırınca Jamaika ve Barbados denemeleri farklı ölçütlerle anlatılıyor. Jamaika için MacTutor “tüm yolculukta beş saniye” diyor. RMG ise bu yolculuğun asıl önemini William Harrison’ın Madeira’ya erken varılacağını önceden söylemesine bağlıyor. Biri sayı veriyor, öteki olayı anlatıyor. Barbados için MacTutor beş ay ve 54 saniye veriyor, ardından Harrison’ın önceden bildirdiği düzeltmeyi uygulayınca 15 saniyeye iniyor. Bu düzeltmenin ne olduğu, nasıl hesaplandığı kaynaklarımda yok. “Önceden belirlenmiş düzeltme” saatin günlük sapmasının bilinmesi olabilir, ama bu benim tahminim.</p>
+<p>Bunun neden önemli olduğunu kendi cümlemle söyleyeyim: bir saat tam doğru olmak zorunda değil, hatasının öngörülebilir olması yeterli. Saat her gün aynı miktarda geri kalıyorsa denizci bunu hesaba katabilir. Beş ay yaklaşık 150 gün, yani 54 saniye günde yaklaşık 0,36 saniyeye denk geliyor (beş ayı 150 gün aldığımda). Bu hesap yaklaşık, yolculuğun gün sayısını kaynaklar vermiyor.</p>
+
+<h2>Harrison’ın günümüzdeki izi</h2>
+<p>Bu hikâye bir müze eşyası olarak yaşıyor. RMG’nin sayfası H1’in bir kopyasının ve H2, H3, H4 saatlerinin aslının Kraliyet Gözlemevi’nde sergilendiğini yazıyor. Sayfaya göre H1’in aslı koruma çalışmasında. Bugünkü okuyucunun aklına belki şu gelir: boylamı bugün kim buluyor? Burada genel bilgimi kullanıyorum ve bu bilgi bu yazıdaki kaynaklarla doğrulanmadı: GPS (Global Positioning System, küresel konumlama sistemi) uydularındaki çok hassas saatlerin gönderdiği zaman işaretlerinin alıcıya ulaşma farkından konum hesaplıyor. İlke yine zaman. Dört yüz yıl önce bir gemide, bugün bir telefonda.</p>
+
+<h2>Bu hikâyede neyi bilmiyoruz?</h2>
+<p>Harrison’ın saatlerinin nasıl çalıştığını bu yazıda anlatmadım. H1, H2 ve H3’ün mekaniğini, H4’ün balansının ayrıntısını kaynaklarım vermiyor. Jefferys’in saatiyle bağlantının ne ölçüde bir ilham, ne ölçüde bir kopya olduğunu da bilmiyorum. RMG yalnızca H4’ün onun yaptığı bir saatin yeni tür balansı etrafında kurulduğunu söylüyor. Kurul’un üyelerini, kararların oy sayılarını ve Harrison’ın aldığı toplam parayı da okumadım. RMG “cömert” diyor, miktar vermiyor.</p>
+
+<h2>Kısa sorular, kısa cevaplar</h2>
+<p><b>Harrison ödülü tek seferde mi aldı?</b> Hayır. RMG’ye göre 1737’de 500 sterlinlik bir anlaşma yapıldı ve 250’si baştan verildi. Sonraki ödemelerin tek tek tutarlarını kaynaklarım vermiyor. Büyük ödemeler 1765 yasasından sonra, uzun bir tartışmanın ardından geldi.</p>
+<p><b>Neden H1 ve H2 yeterli olmadı?</b> H1’in Lizbon seferi bir kanıttı, ama yolculuk kısaydı. H2 hiç denenmedi, çünkü Harrison onda temel bir kusur gördü. Kusurun ne olduğunu kaynaklarım söylemiyor. H3 üzerinde 19 yıl çalışılması, hedefin hem teknik hem de sabır işi olduğunu gösteriyor.</p>
+<p><b>Ay mesafesi yöntemi başarısız mıydı?</b> Kaynaklarımda böyle bir sonuç yok. Maskelyne 1761’de yöntemi ve Mayer’in tablolarını St Helena’da denedi ve boylamın bir derece içinde bulunabileceğini söyledi. Bu, yasanın en düşük ödül kademesinin sınırıyla (bir derece) örtüşüyor. Yöntem en alt kademeye yetiyordu, en üst kademeye değil. Bu karşılaştırma benim yorumum.</p>
+<p><b>Kronometre neden hemen yayılmadı?</b> RMG’ye göre erken kronometreler pahalıydı. Sonraki saatçiler tasarımı basitleştirip ucuzlattı ve 1800’lerin başında yaygınlaştı.</p>
+<p><b>Hikâye “dâhi marangoz, kötü bilim insanları” kadar basit mi?</b> Kaynaklarıma göre değil. Kurul Harrison’ın saatini ödüle uygun buldu ve kısmi ödeme önerdi. Harrison ise kuralların değiştirildiğini düşündü. Maskelyne’in tarafsızlığı tartışıldı, ama Maskelyne’in kendi sınadığı yöntem de ödülün alt kademesini karşılayacak düzeydeydi. İki tarafı da tek cümleyle yargılamak için elimdeki kaynaklar yetmiyor.</p>
+
+<h2>Hikâyeden ne çıkıyor?</h2>
+<p>Boylam sorununu çözenler arasında iki yaklaşım yarıştı: gökyüzünü saat yapmak ve saati gökyüzüne bırakmamak. Benim özetime göre birincisi matematik ve astronomi bilgisi, ikincisi saatçilik ustalığı gerektiriyordu. Kaynaklarımda uzun vadede hangisinin kazandığı ayrıntılı yer almıyor. Bildiğim kadarıyla kronometre ve ay mesafesi bir süre yan yana kullanıldı, ama bunu bu yazı için doğrulamadım. Yazının sonunda kaynakların hangi yerlerde farklı şey söylediğini ve neyi okumadığımı topladım.</p>
+
+<h2>Bu yazının sınırları</h2>
+<p>İki ana kaynağın (RMG ve MacTutor) yalnızca ilgili sayfalarını okudum, Dava Sobel’in <i>Longitude</i> kitabı gibi popüler kaynaklara ve Harrison’ın kendi yazılarına bakmadım. Kendi hesaplarım (saatte 15 derece, derece başına 4 dakika, yarım derece için 120 saniye, hatanın mil karşılığı) ilkokul düzeyinde aritmetik, ama kaynaklarda açıkça yazmıyor. Ay mesafesi yönteminin işleyişini anlatan paragraf benim genel bilgimdir ve doğrulanmamıştır. Scilly kazasının komutanının adı ve kazanın boylamla ilişkisi kaynaklarımda doğrulanmadı. Harrison’ın H1’den H4’e saatlerinin teknik ayrıntılarını (kanatlı çubuk sarkaç, bimetal şerit gibi) bu yazıya almadım, çünkü kaynak sayfalarda bu ayrıntı yok. 1765 yasasının kesin metnine bakmadım. Para birimi dönüşümü yok.</p>
+
+<h2>Kaynaklar çelişiyor</h2>
+<ul class="tl">
+<li><span class="y">1761 Jamaika yolculuğu</span>RMG, William Harrison’ın saatle Madeira’ya erken varılacağını doğru tahmin ettiğini yazıyor. MacTutor aynı yolculukta saatin beş saniye kaybettiğini yazıyor. İkisi çelişmiyor, ama farklı şeyler ölçüyorlar.</li>
+<li><span class="y">Ödülün miktarı</span>RMG, Kurul’un 10.000 sterlin önerdiğini ve ikinci 10.000’in başka saatçilerin benzerini yapabilmesine bağlı olduğunu söylüyor. MacTutor, Kurul’un 20.000 sterlini ödemekte isteksiz olduğunu yazıyor. İki anlatım aynı toplamı farklı çerçevelerde kuruyor.</li>
+<li><span class="y">Ödülün alınışı</span>MacTutor ödülün Harrison kralı araya sokunca alındığını söylüyor. RMG Harrison’ın “cömert bir tazminat” aldığını ama hak ettiğinin tamamını almadığını ekliyor.</li>
+<li><span class="y">1714 yasasının tarihi</span>RMG yalnızca “1714 Boylam Yasası” diyor. MacTutor 16 Haziran 1714 veriyor.</li>
+<li><span class="y">Maskelyne’in rolü</span>MacTutor 1764’te Maskelyne’in hasta olduğunu ve gözlemlerin başkasınca yapılmasını istediğini yazıyor. RMG 1766’da Maskelyne’in saati Gözlemevi’nde on ay boyunca denediğini söylüyor. Bunlar iki ayrı olay, ama ikisini birlikte okuyunca Maskelyne’in tarafsızlığı konusundaki tartışmayı tam anlamıyla yeniden kuramıyorum.</li>
+<li><span class="y">Euler’in payı</span>Bu yazı için bakılan MacTutor sayfasında Euler anılmıyor. Başka kaynaklarda anıldığını biliyorum, ama burada onaylanmadı, bu yüzden yazıya girmedi.</li>
+</ul>
+
+<div class="like">
+<button id="likeBtn" type="button" aria-pressed="false"><span class="h">♡</span> Beğendim <span id="likeCount"></span></button>
+</div>
+
+<p class="src"><b>Başlıca kaynaklar:</b> <a href="https://www.rmg.co.uk/stories/time/harrisons-clocks-longitude-problem">Royal Museums Greenwich, Harrison’s clocks and the longitude problem</a>; <a href="https://mathshistory.st-andrews.ac.uk/HistTopics/Longitude2/">MacTutor (St Andrews), The English attack on the Longitude Problem</a>. Fotoğraf: Jaiju Jacob / Pexels (Pexels lisansı).</p>
+<p class="note">Veri notu: Yalnızca iki ana kaynak sayfası okundu. Saatte 15 derece, derece başına 4 dakika, saniyenin mil karşılığı ve 120 saniyelik sınır benim hesabımdır. Ay mesafesi yönteminin işleyişi, GPS bilgisi ve Harrison’ın saat mekaniğine dair sınırlı genel bilgi doğrulanmamıştır. Bu yazı bilgi amaçlıdır.</p>
+<script>
+(function(){
+  var base='https://thezngn.goatcounter.com/counter/';
+  var slug=(location.pathname.split('/').pop()||'index').replace(/\.html$/,'');
+  var debug=/[?&]debug/.test(location.search), reads=document.getElementById('reads');
+  function dbg(t){ if(debug){ reads.textContent += (reads.textContent?' | ':'')+t; } }
+  function num(v){ return parseInt(String(v).replace(/\D/g,''),10)||0; }
+  function get(path){
+    var url=base+encodeURIComponent(path)+'.json';
+    return fetch(url)
+      .then(function(r){
+        return r.text().then(function(t){
+          dbg(path+' → HTTP '+r.status+(r.ok?'':' "'+t.slice(0,120).replace(/\s+/g,' ')+'"'));
+          if(!r.ok) return null;
+          try{ return JSON.parse(t); }catch(e){ return null; }
+        });
+      })
+      .then(function(d){ return d && d.count ? num(d.count) : null; })
+      .catch(function(e){ dbg(path+' → hata: '+e); return null; });
+  }
+  function first(paths,cb){
+    var i=0;
+    (function next(){
+      if(i>=paths.length) return;
+      get(paths[i++]).then(function(n){ if(n!==null) cb(n); else next(); });
+    })();
+  }
+  var p=location.pathname, paths=[p, p.replace(/\.html$/,'')];
+  setTimeout(function(){
+    try{ var q=window.goatcounter && goatcounter.get_data && goatcounter.get_data().p; if(q && paths.indexOf(q)<0) paths.push(q); }catch(e){}
+    first(paths,function(n){ if(n>0) reads.textContent = n+' kez okundu'; else dbg('sayaç 0'); });
+  },600);
+  var key='begeni-'+slug, liked=false, server=0;
+  var btn=document.getElementById('likeBtn'), cnt=document.getElementById('likeCount');
+  try{ liked = localStorage.getItem(key)==='1'; }catch(e){}
+  function render(){
+    var n=Math.max(server, liked?1:0);
+    btn.setAttribute('aria-pressed', liked?'true':'false');
+    btn.querySelector('.h').textContent = liked?'♥':'♡';
+    cnt.textContent = n ? '· '+n : '';
+  }
+  get(key).then(function(n){ if(n!==null){ server=Math.max(server,n); render(); } });
+  btn.addEventListener('click',function(){
+    if(liked) return;
+    liked=true; server+=1;
+    try{ localStorage.setItem(key,'1'); }catch(e){}
+    render();
+    var tries=0, t=setInterval(function(){
+      if(window.goatcounter && window.goatcounter.count){
+        clearInterval(t);
+        window.goatcounter.count({path:key, title:'Beğeni: '+slug, event:true});
+      } else if(++tries>50){ clearInterval(t); }
+    },200);
+  });
+  render();
+})();
+</script>
+</main>
+<script src="site.js?v=20261115a" defer></script>
+</body>
+</html>
