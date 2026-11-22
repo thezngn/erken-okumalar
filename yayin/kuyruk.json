@@ -180,5 +180,18 @@
     "date_card": "29 Kasım 2026",
     "pub": "2026-11-29T04:45:00Z",
     "rfc": "Sun, 29 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "karar-yorgunlugu",
+    "file": "yayin/karar-yorgunlugu.html",
+    "title": "Karar Yorgunluğu: Gün İçinde Kararlarımız Gerçekten Kötüleşiyor mu?",
+    "desc": "Karar verdikçe irademiz tükeniyor mu? Aç hâkim çalışması, ego tükenmesi kuramı, 23 laboratuvarlık tekrar ve bu tartışmada neyin sağlam kaldığı, kaynaklarıyla.",
+    "tags": [
+      "Kişisel Gelişim",
+      "Psikoloji"
+    ],
+    "date_card": "23 Kasım 2026",
+    "pub": "2026-11-23T04:45:00Z",
+    "rfc": "Mon, 23 Nov 2026 04:45:00 +0000"
   }
 ]

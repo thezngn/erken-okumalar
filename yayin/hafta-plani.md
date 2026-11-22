@@ -37,7 +37,7 @@ Her gün 07:45 İstanbul (feed pubDate 04:45 UTC), 13 dakikalık Türkçe okuma 
 - Paz 22 Kas: Veri merkezleri ve elektrik tüketimi
 
 ## Gelecek haftanın konuları (22 Kasım Pazar sorusu, cevap gelmedi, varsayılanlar alındı)
-- Pzt 23 Kas: kişisel gelişim (konu sorulmadı, kuyrukta kayıt yok; içerik oturumu bakmalı)
+- Pzt 23 Kas: Karar yorgunluğu (Emrah seçti, içerik oturumunda yazıldı, kuyrukta)
 - Sal 24 Kas: Venedik Cumhuriyeti (kuyrukta)
 - Çar 25 Kas: Fransa ekonomisi (kuyrukta)
 - Per 26 Kas: Kahve, kelime yolculuğu (kuyrukta)
@@ -45,3 +45,6 @@ Her gün 07:45 İstanbul (feed pubDate 04:45 UTC), 13 dakikalık Türkçe okuma 
 - Cmt 28 Kas: McLaren F1 (varsayılan Kuvars krizi quartz-krizi.html olarak zaten yayında olduğundan 2. öneri alındı)
 - Paz 29 Kas: Kuzey Deniz Yolu (kuyrukta)
 - Not: Kuzey Deniz Yolu fotoğrafının fotoğrafçı adı ve sayfa URL'si doğrulanamadı (images.json "DOĞRULANAMADI"); fotoğraflar fetch-images iş akışıyla inecek.
+
+## 22 Kasım kararı (Emrah)
+- Pazar 10:17 görevi yalnızca konu sorusu sorar ve önerileri iletir (Pazartesi dahil). Yazıları içerik oturumu yazar. 22 Kasım'da görev cevap gelmeyince 6 yazıyı kendisi yazmıştı, Emrah bunları kabul etti.
