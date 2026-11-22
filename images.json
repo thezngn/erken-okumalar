@@ -238,5 +238,65 @@
     "license": "Pexels License (ücretsiz kullanım; sayfada: Free)",
     "verified": "2026-11-20",
     "used_in": "veri-merkezleri-elektrik"
+  },
+  {
+    "file": "venedik-kanal.jpg",
+    "url": "https://images.pexels.com/photos/20284352/pexels-photo-20284352.jpeg",
+    "page": "https://www.pexels.com/photo/empty-gondola-on-a-canal-in-venice-20284352/",
+    "author": "Gonzalo Facello",
+    "source": "Pexels",
+    "license": "Pexels License (ticari kullanım serbest, atıf zorunlu değil)",
+    "verified": "2026-11-22",
+    "used_in": "venedik-cumhuriyeti.html"
+  },
+  {
+    "file": "paris-eyfel-havadan.jpg",
+    "url": "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://pexels.com/photo/1308940",
+    "author": "Chris Molloy",
+    "source": "Pexels",
+    "license": "Pexels License (ticari kullanım serbest, atıf zorunlu değil)",
+    "verified": "2026-11-22",
+    "used_in": "fransa-ekonomisi.html"
+  },
+  {
+    "file": "kahve-cekirdekleri.jpg",
+    "url": "https://images.pexels.com/photos/773958/pexels-photo-773958.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "page": "https://www.pexels.com/photo/close-up-photography-of-roasted-coffee-beans-773958/",
+    "author": "Adam Lukac",
+    "source": "Pexels",
+    "license": "Pexels License (ticari kullanım serbest, atıf zorunlu değil)",
+    "verified": "2026-11-22",
+    "used_in": "kahve-kelime-yolculugu.html"
+  },
+  {
+    "file": "voyager-samanyolu-sokak-lambasi.jpg",
+    "url": "https://images.pexels.com/photos/2498533/pexels-photo-2498533.jpeg",
+    "page": "https://www.pexels.com/photo/2498533",
+    "author": "Guillaume Meurice",
+    "source": "Pexels",
+    "license": "Pexels License (ticari kullanım serbest, atıf zorunlu değil)",
+    "verified": "2026-11-22",
+    "used_in": "voyager-yolculugu.html"
+  },
+  {
+    "file": "mclaren-benzeri-sari-spor-otomobil.jpg",
+    "url": "https://images.unsplash.com/photo-1725199294836-d48bc3804281?fm=jpg&q=80&w=1600&auto=format&fit=crop",
+    "page": "https://unsplash.com/photos/a-yellow-sports-car-parked-in-a-garage-O_gYw3deB6U",
+    "author": "Mathew Antony",
+    "source": "Unsplash",
+    "license": "Unsplash License (sayfada: Free to use under the Unsplash License)",
+    "verified": "2026-11-22",
+    "used_in": "mclaren-f1.html"
+  },
+  {
+    "file": "kuzey-deniz-yolu-buzkiran.jpg",
+    "url": "https://images.pexels.com/photos/35874549/pexels-photo-35874549/free-photo-of-icebreaker-ship-navigates-arctic-waters-at-sunset.jpeg",
+    "page": "https://pexels.com/photo/30148726",
+    "author": "DOĞRULANAMADI",
+    "source": "Pexels",
+    "license": "Pexels License (sayfada Free to use)",
+    "verified": "2026-11-22",
+    "used_in": "kuzey-deniz-yolu.html"
   }
 ]

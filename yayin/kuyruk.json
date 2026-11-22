@@ -102,5 +102,83 @@
     "date_card": "22 Kasım 2026",
     "pub": "2026-11-22T04:45:00Z",
     "rfc": "Sun, 22 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "venedik-cumhuriyeti",
+    "file": "yayin/venedik-cumhuriyeti.html",
+    "title": "Venedik Cumhuriyeti: Bin Yıllık Bir Devletin Çarkları",
+    "desc": "Venedik Cumhuriyeti’nin doge seçimi, Büyük Konsey’in kapanması, Onlar Konseyi, Arsenal, 1204, veba, Lepanto ve 1797’de sessizce sona erişi, kaynaklarıyla.",
+    "tags": [
+      "Tarih",
+      "Devlet"
+    ],
+    "date_card": "24 Kasım 2026",
+    "pub": "2026-11-24T04:45:00Z",
+    "rfc": "Tue, 24 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "fransa-ekonomisi",
+    "file": "yayin/fransa-ekonomisi.html",
+    "title": "Fransa Ekonomisi: Durgun Büyüme, Rekor Borç ve Bütçe Çıkaramayan Meclis",
+    "desc": "Fransa’nın 2026 tablosu: sıfıra yakın büyüme, yüzde 5,4’lük açık, 1978’den beri en yüksek borç, bütçe krizi, emeklilik reformu, nükleer enerji, lüks sektörü ve tarım üzerine, kaynaklarıyla.",
+    "tags": [
+      "Ekonomi",
+      "Siyasi Tarih"
+    ],
+    "date_card": "25 Kasım 2026",
+    "pub": "2026-11-25T04:45:00Z",
+    "rfc": "Wed, 25 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "kahve-kelime-yolculugu",
+    "file": "yayin/kahve-kelime-yolculugu.html",
+    "title": "Kahve Nereden Geliyor? Bir Kelimenin ve Bir İçeceğin Yolculuğu",
+    "desc": "Arapça qahwa, Osmanlı kahvesi, Felemenkçe koffie ve İngilizce coffee: kelimenin yolculuğu, Kaffa efsanesi ile “iştah kesen” anlamı arasındaki köken tartışması ve 1554 İstanbul’u, kaynaklarıyla.",
+    "tags": [
+      "Dil",
+      "Tarih"
+    ],
+    "date_card": "26 Kasım 2026",
+    "pub": "2026-11-26T04:45:00Z",
+    "rfc": "Thu, 26 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "voyager-yolculugu",
+    "file": "yayin/voyager-yolculugu.html",
+    "title": "Voyager 1 ve 2: 49 Yıllık Yolculuk ve Bir Işık-Günü",
+    "desc": "Grand Tour’dan Altın Plak’a, Pale Blue Dot’tan 18 Kasım 2026’daki bir ışık-günü eşiğine ve bugünkü güç tasarrufuna: Voyager 1 ve 2’nin 49 yıllık yolculuğu, NASA ve JPL kaynaklarıyla.",
+    "tags": [
+      "Uzay",
+      "Bilim ve Teknoloji"
+    ],
+    "date_card": "27 Kasım 2026",
+    "pub": "2026-11-27T04:45:00Z",
+    "rfc": "Fri, 27 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "mclaren-f1",
+    "file": "yayin/mclaren-f1.html",
+    "title": "McLaren F1: Üç Koltuk, Altın Motor Bölmesi ve 386,4 km/s",
+    "desc": "Murray’ın üç koltuklu planı, BMW V12, altın kaplı motor bölmesi, 1998 hız rekoru, 1995 Le Mans zaferi ve 2025’teki 25 milyon dolarlık satış, kaynaklarıyla.",
+    "tags": [
+      "Otomobil",
+      "Tasarım ve Mühendislik"
+    ],
+    "date_card": "28 Kasım 2026",
+    "pub": "2026-11-28T04:45:00Z",
+    "rfc": "Sat, 28 Nov 2026 04:45:00 +0000"
+  },
+  {
+    "slug": "kuzey-deniz-yolu",
+    "file": "yayin/kuzey-deniz-yolu.html",
+    "title": "Kuzey Deniz Yolu: Arktik Ticaret Hattı Ne Kadar Gerçek?",
+    "desc": "Kuzey Deniz Yolu 2026 sezonunda rekor tazeledi; mesafe, buz, konteyner, LNG, buzkıran, yaptırım ve Arktik siyaseti, çelişen rakamlarıyla, kaynaklarıyla.",
+    "tags": [
+      "Ekonomi",
+      "Jeopolitik"
+    ],
+    "date_card": "29 Kasım 2026",
+    "pub": "2026-11-29T04:45:00Z",
+    "rfc": "Sun, 29 Nov 2026 04:45:00 +0000"
   }
 ]
