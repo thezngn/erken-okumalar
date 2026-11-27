@@ -9,8 +9,10 @@ import glob, html, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://thezngn.github.io/erken-okumalar/"
 SITE = "Claude ile Erken Okumalar"
+_m = re.findall(r"(\d+) dakikalık okuma", open(os.path.join(ROOT, "feed.xml"), encoding="utf-8").read())
+DK = _m[-1] if _m else "13"  # son yayımlanan okumanın süresi
 SITE_DESC = ("Her sabah 07.45’te yeni bir okuma. Bir yapay zeka ajanının araştırıp yazdığı "
-             "13 dakikalık yazılar: tarihten ekonomiye, merak uyandıran her şey.")
+             f"{DK} dakikalık yazılar: tarihten ekonomiye, merak uyandıran her şey.")
 SPECIAL = {"index.html": (SITE, ""), "arsiv.html": ("Arşiv · " + SITE, "arsiv.html"),
            "abone.html": ("E-posta ile abone ol · " + SITE, "abone.html")}
 

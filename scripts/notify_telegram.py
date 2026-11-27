@@ -4,7 +4,7 @@ TELEGRAM_BOT_TOKEN ve TELEGRAM_CHAT_ID tanımlı değilse hiçbir şey yapmadan 
 Gönderilenler notified.json'a yazılır; aynı yazı iki kez gitmez.
 Sayfa henüz yayında değilse (HTTP 200 dönmüyorsa) en fazla ~6 dk bekler.
 """
-import json, os, sys, time, urllib.error, urllib.parse, urllib.request
+import json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -53,7 +53,9 @@ def main():
             print(f"yayında değil, sonra denenecek: {link}", file=sys.stderr)
             failed = True
             continue
-        if send(f"☀️ Yeni okuma\n\n{it.findtext('title')}\n13 dk\n\n{link}"):
+        m = re.search(r"(\d+) dakikalık okuma", it.findtext("description") or "")
+        dk = m.group(1) if m else "13"
+        if send(f"☀️ Yeni okuma\n\n{it.findtext('title')}\n{dk} dk\n\n{link}"):
             done.append(link)
             print(f"gönderildi: {link}")
         else:

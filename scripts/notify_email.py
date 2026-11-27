@@ -63,7 +63,10 @@ def tags_for(link):
 def build(item):
     title = item.findtext("title") or ""
     link = item.findtext("link") or ""
-    desc = re.sub(r"\s*13 dakikalık okuma\.?\s*$", "", item.findtext("description") or "")
+    raw = item.findtext("description") or ""
+    m = re.search(r"(\d+) dakikalık okuma", raw)
+    dk = m.group(1) if m else "13"
+    desc = re.sub(r"\s*\d+ dakikalık okuma\.?\s*$", "", raw)
     try:
         d = parsedate_to_datetime(item.findtext("pubDate"))
         d = d.astimezone(__import__("zoneinfo").ZoneInfo("Europe/Istanbul"))
@@ -73,7 +76,7 @@ def build(item):
     tags = "".join(html.escape(t) + " · " for t in tags_for(link))
     tpl = open(os.path.join(ROOT, "templates", "email.html"), encoding="utf-8").read()
     body = (tpl.replace("{{TITLE}}", html.escape(title)).replace("{{DESC}}", html.escape(desc))
-               .replace("{{DATE}}", date).replace("{{TAGS}}", tags).replace("{{URL}}", html.escape(link)))
+               .replace("{{DATE}}", date).replace("{{TAGS}}", tags).replace("{{DK}}", dk).replace("{{URL}}", html.escape(link)))
     return title, link, body
 
 
@@ -112,7 +115,7 @@ def main():
         code, res = api("/emailCampaigns", {
             "name": f"Erken Okumalar: {title}"[:120],
             "subject": f"☀️ {title}",
-            "previewText": re.sub(r"\s*13 dakikalık okuma\.?\s*$", "", it.findtext("description") or "")[:140],
+            "previewText": re.sub(r"\s*\d+ dakikalık okuma\.?\s*$", "", it.findtext("description") or "")[:140],
             "sender": {"name": SENDER_NAME, "email": SENDER},
             "htmlContent": body,
             "recipients": {"listIds": [int(LIST)]},

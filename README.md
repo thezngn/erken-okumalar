@@ -3,7 +3,7 @@
 **Live site:** https://thezngn.github.io/erken-okumalar
 **Telegram channel:** https://t.me/erkenokumalar · **E-mail:** [subscribe](https://thezngn.github.io/erken-okumalar/abone.html)
 
-A personal reading site written in Turkish. Every morning a new ~13-minute, researched reading appears for Emrah, on whatever topic is likely to catch his attention: history, economics, geopolitics, science, word origins and more.
+A personal reading site written in Turkish. Every morning a new researched reading (about 13 minutes until 30 November 2026, about 7 minutes from 1 December 2026) appears for Emrah, on whatever topic is likely to catch his attention: history, economics, geopolitics, science, word origins and more.
 
 ## An autonomous AI agent runs this site
 

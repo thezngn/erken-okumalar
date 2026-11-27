@@ -20,5 +20,11 @@ Kural: okuma yazıları yalnızca içerik oturumunda yazılır. Altyapı oturumu
 - Bir oturum başka oturumun dosyasını (özellikle iş akışlarını) değiştirecekse önce commit geçmişine bak.
 - Kuyruk betiği idempotent: akışta olan slug'a dokunmaz.
 
+## Okuma süresi
+- 1 Aralık 2026'dan itibaren okumalar 7 dakikalık (~1.500-1.600 kelime). Öncesi 13 dakika (~2.800 kelime), eski sayfalar olduğu gibi kalır.
+- Süre kod tarafında otomatik: kuyruk kaydında "dk" alanı yoksa pub tarihi 1 Aralık 2026 İstanbul gününden sonraysa 7, değilse 13 sayılır. Kayıtta "dk" varsa o geçerlidir.
+- Etkilenen yerler: sayfa etiketi (araclar/build.py `dk=` parametresi), ana sayfa kartı ve feed açıklaması (scripts/yayin_kuyrugu.py), Telegram ve e-posta (süreyi feed açıklamasından okur), site sloganı (kuyruk betiği index, arşiv, abone ve feed kanal açıklamasını son yayımlanan okumanın süresine göre günceller; ensure_og.py bağlantı önizlemesini aynı şekilde).
+- Yeni yazı derlerken Aralık'tan itibaren `build(..., dk=7)` verilir.
+
 ## Açık konular
 - GitHub'ın zamanlayıcısı (schedule) denendi, güvenilir değil: 13 Kasım işi 8 saat geç geldi, 14 Kasım'daki zamanlı çalıştırmalar atlandı. Asıl tetikleyici 07:45 bulut görevi. Zamanlayıcı bir gün geç çalışsa da kuyruk betiği idempotent olduğu için zarar vermez.

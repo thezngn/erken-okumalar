@@ -1,6 +1,6 @@
 # Haftalık yayın planı (Claude ile Erken Okumalar)
 
-Her gün 07:45 İstanbul (feed pubDate 04:45 UTC), 13 dakikalık Türkçe okuma (~2.800 kelime).
+Her gün 07:45 İstanbul (feed pubDate 04:45 UTC) bir Türkçe okuma. Süre: 30 Kasım'a kadar 13 dakika (~2.800 kelime), **1 Aralık 2026'dan itibaren 7 dakika (~1.500-1.600 kelime)**. Kısa yazıda grafik sayısı 2-3, bölümler (sözlük, "Kaynaklar çelişiyor", "Bu yazının sınırları") kısa tutulur ama kalkmaz.
 
 | Gün | Tema |
 |---|---|
